@@ -10,4 +10,30 @@ p {
     color: purple
 }
 
-/* comments */
+/* comment */
+
+.paragraph {
+    background-color: #000000;
+    padding: 5px;
+    color: aqua
+}
+
+#title {
+    font-size: larger;
+    color: chocolate;
+    border: 3px solid blueviolet
+}
+
+/* ordem */
+
+h2 {
+    border-bottom: 2px solid red
+}
+
+.title-class {
+    border-bottom: 3px solid blue
+}
+
+#title-id {
+    border-bottom: 4px solid green
+}
