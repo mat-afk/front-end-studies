@@ -12,6 +12,8 @@ p {
 
 /* comment */
 
+/* class & id */
+
 .paragraph {
     background-color: #000000;
     padding: 5px;
@@ -36,4 +38,31 @@ h2 {
 
 #title-id {
     border-bottom: 4px solid green
+}
+
+/* color name */
+
+.color-name {
+    color: darkorchid;
+}
+
+/* hexadecimal */
+
+.hexadecimal {
+    color: #4682B4;
+    /* #123 é a mesma coisa que #112233 */
+}
+
+/* rgb & rgba */
+
+.rgb {
+    color: rgb(255, 255, 77);
+}
+
+.rgba {
+    color: rgb(255, 38, 38, 0.7)
+}
+
+.hsl {
+    color: hsl(100, 50%, 50%)
 }
