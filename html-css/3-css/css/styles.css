@@ -63,6 +63,15 @@ h2 {
     color: rgb(255, 38, 38, 0.7)
 }
 
+/* hsl */
+
 .hsl {
     color: hsl(100, 50%, 50%)
+}
+
+/* background color */
+
+.bg-color {
+    background-color: #FF0;
+    color: #000
 }
