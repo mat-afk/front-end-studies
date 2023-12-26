@@ -199,3 +199,18 @@ h2 {
     border: 3px dotted #00F;
     padding: 10px;
 }
+
+/* individual border */
+
+.border-left {
+    color: #000;
+    background-color: rgb(137, 255, 137);
+    border-left: 7px solid #0F0;
+    padding: 20px
+}
+
+.border-bottom {
+    color: #000;
+    border-bottom: 5px double #0FF;
+    padding: 10px;
+}
