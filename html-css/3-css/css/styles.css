@@ -187,3 +187,15 @@ h2 {
     padding: 50px;
     box-sizing: border-box;
 }
+
+/* border */
+
+.border {
+    border: 5px solid #F00;
+    padding: 10px;
+}
+
+.border-2 {
+    border: 3px dotted #00F;
+    padding: 10px;
+}
