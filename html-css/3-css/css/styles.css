@@ -105,3 +105,18 @@ h2 {
     padding: 10px;
     background-image: url("../img/ottawa.png");
 }
+
+/* centralized background image */
+
+.not-centered-bg,
+.centered-bg {
+    height: 400px;
+    width:400px;
+    background-image: url("../img/toronto.jpg");
+    margin-bottom: 20px;
+}
+
+.centered-bg {
+    background-position: center;
+    background-size: cover;
+}
