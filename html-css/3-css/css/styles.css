@@ -97,3 +97,11 @@ h2 {
 .rgba-opacity {
     background-color: rgba(0, 0, 255, 0.2);
 }
+
+/* background image */
+
+.bg-image {
+    color: #FFF;
+    padding: 10px;
+    background-image: url("../img/ottawa.png");
+}
