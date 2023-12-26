@@ -211,6 +211,21 @@ h2 {
 
 .border-bottom {
     color: #000;
-    border-bottom: 5px double #0FF;
+    border-bottom: 5px double  #0FF;
     padding: 10px;
+}
+
+/* border radius */
+
+.rounded-border {
+    border: 3px solid #FF0;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: rgb(255, 255, 202);
+}
+
+.rounded-border-2 {
+    border-radius: 15px;
+    padding: 10px;
+    background-color: rgb(255, 255, 202);
 }
