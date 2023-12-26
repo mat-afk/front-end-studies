@@ -120,3 +120,16 @@ h2 {
     background-position: center;
     background-size: cover;
 }
+
+/* height and width */
+
+.height-width {
+    height: 200px;
+    width: 100px;
+    background-color: #F00;
+}
+
+.height-width-2 {
+    height: 100px;
+    background-color: #0F0F0F;
+}
