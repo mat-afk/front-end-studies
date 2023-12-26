@@ -133,3 +133,15 @@ h2 {
     height: 100px;
     background-color: #0F0F0F;
 }
+
+/* padding */
+
+.without-padding,
+.with-padding {
+    background-color: #000;
+    color: #FFF;     
+}
+
+.with-padding {
+    padding: 20px;
+}
