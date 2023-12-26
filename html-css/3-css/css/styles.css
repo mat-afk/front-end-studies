@@ -170,3 +170,20 @@ h2 {
     color: #FFF;
     padding: 20px 10px;
 }
+
+/* border-box */
+
+.without-border-box {
+    background-color: #666;
+    color: #FFF;
+    width: 400px;
+    padding: 50px;
+}
+
+.with-border-box {
+    background-color: #777;
+    color: #FFF;
+    width: 400px;
+    padding: 50px;
+    box-sizing: border-box;
+}
