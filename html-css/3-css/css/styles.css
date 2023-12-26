@@ -75,3 +75,19 @@ h2 {
     background-color: #FF0;
     color: #000
 }
+
+/* opacity */
+
+.bg-opacity {
+    background-color: #0F0F0F;
+    opacity: 0.2;
+}
+
+.bg-opacity-2 {
+    background-color: #999;
+    opacity: 0.5;
+}
+
+.bg-opacity-2 p {
+    color:#000;
+}
