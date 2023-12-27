@@ -7,7 +7,8 @@ h3 {
 }
 
 p {
-    color: purple
+    color: #000;
+    font-size: 20px;
 }
 
 /* comment */
@@ -274,4 +275,16 @@ h2 {
     color: #9000ff;
     background-color: #f6e1ff;
     border: none;
+}
+
+/* text alignment */
+
+.text-aligned {
+    text-align: right;
+}
+
+.container-centered {
+    text-align: center;
+    width: 300px;
+    border: 1px solid #F00;
 }
