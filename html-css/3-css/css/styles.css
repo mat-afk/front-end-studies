@@ -303,3 +303,13 @@ h2 {
     text-decoration: none;
     color: #7112ff;
 }
+
+/* text transform */
+
+.upper {
+    text-transform: uppercase;
+}
+
+.lower {
+    text-transform: lowercase;
+}
