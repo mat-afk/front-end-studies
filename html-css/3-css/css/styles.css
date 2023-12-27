@@ -257,3 +257,21 @@ h2 {
     width: 200px;
     height: 400px;
 }
+
+/* desafio CSS 2 */
+
+#box-model-challenge {
+    margin: 30px 20px;
+    border: 3px solid #eacafc;
+    outline: 3px solid #a200ff;
+    padding: 15px;
+    width: 300px;
+    height: 100px;
+    box-sizing: border-box;
+}
+
+.text-challenge {
+    color: #9000ff;
+    background-color: #f6e1ff;
+    border: none;
+}
