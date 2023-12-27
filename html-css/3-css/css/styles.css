@@ -428,3 +428,31 @@ h2 {
     top: 2px;
     right: 2px;
 }
+
+/* relative with absolute */
+
+.relative-container {
+    width: 300px;
+    height: 300px;
+    border: 1px solid #F00;
+    margin-top: 50px;
+    position: relative;
+}
+
+.absolute-1,
+.absolute-2 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #00F;
+}
+
+.absolute-1 {
+    top: 10px;
+    left: 10px;
+}
+
+.absolute-2 {
+    bottom: 10px;
+    right: 10px;
+}
