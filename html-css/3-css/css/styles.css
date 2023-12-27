@@ -315,6 +315,29 @@ h2 {
 }
 
 /* letter spacing */
+
 .letter-spacing {
     letter-spacing: 5px;
+}
+
+/* font */
+
+.serif {
+    font-family: Georgia;
+}
+
+.sans-serif {
+    font-family: Verdana;
+}
+
+.monospace {
+    font-family: Courier New;
+}
+
+.cursive {
+    font-family: cursive;
+}
+
+.fantasy {
+    font-family: fantasy;
 }
