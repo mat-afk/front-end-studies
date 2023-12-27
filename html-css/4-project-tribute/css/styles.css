@@ -3,12 +3,21 @@ html {
     background-color: #9284e1;
 }
 
+.logo {
+    width: 300px;
+    position: sticky;
+    top: 70px;
+    left: 70px;
+    z-index: 2;
+}
+
 .container {
-    max-width: 1500px;
+    max-width: 1600px;
     background-color: #FFF;
     position: relative;
     margin: 50px auto;
-    padding: 20px 50px;
+
+    padding: 20px 70px;
 }
 
 .bold {
