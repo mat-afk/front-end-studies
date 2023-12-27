@@ -399,3 +399,12 @@ h2 {
 .invisible {
     display: none
 }
+
+/* position */
+
+.static {
+    position: static;
+    background-color: #666;
+    padding: 10px;
+    margin: 10px;
+}
