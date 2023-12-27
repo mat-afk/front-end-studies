@@ -288,3 +288,18 @@ h2 {
     width: 300px;
     border: 1px solid #F00;
 }
+
+/* text decoration */
+
+.underline {
+    text-decoration: underline;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+.underline-removed {
+    text-decoration: none;
+    color: #7112ff;
+}
