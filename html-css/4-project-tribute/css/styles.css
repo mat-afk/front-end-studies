@@ -11,7 +11,8 @@ html {
 }
 
 .logo-container img {
-    width: 250px;
+    width: 300px;
+    opacity: 0.7;
 }
 
 .container {
@@ -62,6 +63,10 @@ html {
     margin: 25px 0;
     border-top: 1px dashed #DDD;
     border-bottom: 1px dashed #DDD;
+}
+
+.biography-container p {
+    font-size: 16px;
 }
 
 /* quotes */
