@@ -19,3 +19,15 @@ h1 {
         font-size: 30px;
     }
 }
+
+/* landscape */
+
+h3 {
+    display: none;
+}
+
+@media screen and (orientation: landscape) {
+    h3 {
+        display: block;
+    }
+}
