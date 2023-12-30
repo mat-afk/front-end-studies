@@ -2,8 +2,20 @@ h1 {
     color: red;
 }
 
+/* media query */
+
+/* max width */
+
 @media screen and (max-width: 500px) {
     h1 {
         color: blue;
+    }
+}
+
+/* min width */
+
+@media screen and (min-width: 800px) {
+    p {
+        font-size: 30px;
     }
 }
