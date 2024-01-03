@@ -1,0 +1,11 @@
+body {
+    padding-bottom: 500px;
+}
+
+/*  flex */
+
+.flex {
+    display: flex;
+    background-color: #CCC;
+    margin-bottom: 20px;
+}
