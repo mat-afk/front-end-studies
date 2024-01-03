@@ -9,3 +9,11 @@ body {
     background-color: #CCC;
     margin-bottom: 20px;
 }
+
+/* flex direction */
+
+.flex-column {
+    background-color: #DDD;
+    display: flex;
+    flex-direction: column;
+}
