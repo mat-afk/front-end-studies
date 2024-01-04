@@ -192,3 +192,16 @@ body {
 .shorthand .different {
     flex: 3 1 400px;
 }
+
+/* align self */
+
+.auto-alignment {
+    height: 300px;
+    display: flex;
+    align-items: flex-end;
+    border: 1px solid blue
+}
+
+.auto-alignment .different {
+    align-self: center;
+}
