@@ -102,3 +102,115 @@ body {
     margin-left: -25px;
     font-size: 14px;
 }
+
+/* facebook login */
+
+#facebook-login {
+    margin-bottom: 25px;
+}
+
+#facebook-login a {
+    text-decoration: none;
+    color: #385185;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#facebook-login img {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+#facebook-login span {
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 1px;
+}
+
+/* forgot password */
+
+#forgot-pass {
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+#forgot-pass a {
+    text-decoration: none;
+    color: #373799;
+}
+
+/* register */
+
+#register-container {
+    background-color: #FFF;
+    border: 1px solid #DBDBDB;
+    width: 350px;
+    margin-top: 10px;
+    padding: 25px;
+}
+
+#register-container p {
+    font-size: 14px;
+    color: #262626;
+}
+
+#register-container a {
+    color: #4A95F6;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* get app */
+
+#get-app-container {
+    text-align: center;
+    width: 350px;
+}
+
+#get-app-container p {
+    margin: 20px 0;
+    font-size: 13px;
+}
+
+#get-app-container a {
+    text-decoration: none;
+}
+
+#get-app-container img {
+    width: 136px;
+    height: 40px;
+}
+
+/* footer */
+
+footer {
+    text-align: left;
+    width: 1000px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer #footer-links {
+    display: flex;
+    list-style: none;
+}
+
+#footer-links li {
+    margin-right: 10px;
+}
+
+#footer-links a,
+#copyright {
+    text-decoration: none;
+    color: #8E8E8E;
+    font-size: 12px;
+}
+
+#copyright {
+    margin-top: 10px;
+}
