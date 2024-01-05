@@ -1,4 +1,4 @@
-/* General */
+/* general */
 
 * {
     margin: 0;
@@ -11,7 +11,7 @@ body {
     background-color: #fafafa;
 }
 
-/* Container */
+/* container */
 
 #main-container {
     display: flex;
@@ -37,4 +37,68 @@ body {
 
 #form-container {
     text-align: center;
+}
+
+/* login form */
+
+#form-box {
+    background-color: #FFF;
+    border: 1px solid #DBDBDB;
+    width: 350px;
+    margin-top: 30px;
+}
+
+#logo-ig {
+    width: 175px;
+    height: 51px;
+    margin: 30px auto 12px;
+}
+
+#login-form {
+    margin-top: 20px;
+}
+
+#login-form input {
+    display: block;
+    font-size: 12px;
+    padding: 12px 9px;
+    background-color: #FAFAFA;
+    border: 1px solid #DBDBDB;
+    border-radius: 3px;
+    width: 268px;
+    margin: 5px auto;
+}
+
+#login-form input[type="submit"] {
+    background-color: #B2DFFC;
+    color: #FFF;
+    margin-top: 15px;
+    border-radius: 5px;
+    height: 30px;
+    font-size: 13px;
+    padding: 0;
+    font-weight: bold;
+}
+
+/* separator */
+
+.separator {
+    position: relative;
+}
+
+.line {
+    border-top: 1px solid #DBDBDB;
+    width: 269px;
+    margin: 25px auto 35px;
+}
+
+.separator span {
+    position: absolute;
+    text-transform: uppercase;
+    color: #BBB;
+    background-color: #FFF;
+    top: -6px;
+    width: 50px;
+    margin-left: -25px;
+    font-size: 14px;
 }
