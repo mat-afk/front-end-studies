@@ -15,7 +15,7 @@ body {
 
 #main-container {
     display: flex;
-    margin-top: 30px;
+    margin-top: 60px;
 }
 
 #banner-container,
@@ -213,4 +213,41 @@ footer #footer-links {
 
 #copyright {
     margin-top: 10px;
+}
+
+/* mobile */
+
+@media (max-width: 450px) {
+
+    body {
+        background-color: #FFF;
+    }
+
+    #banner-container {
+        display: none;
+    }
+
+    #main-container,
+    #form-box {
+        margin-top: 0;
+    }
+
+    #form-container,
+    #form-box,
+    #register-container,
+    #get-app-container {
+        width: 100%;
+        border: none;
+    }
+
+    footer {
+        width: 90%;
+    }
+
+    #footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
 }
