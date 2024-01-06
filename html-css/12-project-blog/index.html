@@ -1,12 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <h1>Hello, world</h1>
-</body>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav id="navbar">
+        <div id="navbar-inner">
+          <h2>Blog</h2>
+          <ul id="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About Us</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+      <main id="posts-container">
+        <article class="post">
+          <img src="img/toronto.jpg" alt="Toronto University" />
+          <h3 class="title"><a href="#">Some Title</a></h3>
+          <p class="description">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa
+            delectus nulla, unde asperiores vel temporibus pariatur cupiditate
+            atque numquam itaque sapiente voluptatibus cum suscipit deserunt
+            nihil quos hic laudantium odio.
+          </p>
+          <a href="#">See more</a>
+        </article>
+        <article class="post">
+          <img src="img/ottawa.png" alt="University of Ottawa" />
+          <h3 class="title"><a href="#">Another Title</a></h3>
+          <p class="description">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa
+            delectus nulla, unde asperiores vel temporibus pariatur cupiditate
+            atque numquam itaque sapiente voluptatibus cum suscipit deserunt
+            nihil quos hic laudantium odio.
+          </p>
+          <a href="#">See more</a>
+        </article>
+        <article class="post">
+          <img src="img/ucb.jpg" alt="University of British Columbia" />
+          <h3 class="title"><a href="#">Another Title</a></h3>
+          <p class="description">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa
+            delectus nulla, unde asperiores vel temporibus pariatur cupiditate
+            atque numquam itaque sapiente voluptatibus cum suscipit deserunt
+            nihil quos hic laudantium odio.
+          </p>
+          <a href="#">See more</a>
+        </article>
+      </main>
+      <aside class="sidebar"></aside>
+    </div>
+  </body>
 </html>
