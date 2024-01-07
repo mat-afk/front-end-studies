@@ -22,3 +22,9 @@ console.log(lastName, lastname);
 let _test = "Bababoey";
 let $test = "Bababoey";
 console.log(_test, $test);
+
+// Built-in functions
+
+// Prompt
+const firstName = prompt("What's your first name?");
+console.log(`Your name is ${firstName}`);
