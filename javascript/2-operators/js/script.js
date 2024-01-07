@@ -71,4 +71,4 @@ console.log(null >= 0);
 console.log(5 * null);
 console.log("10" + 1);
 console.log("10" - 1);
-console.log("Hello, " * "world")
+console.log("Hello, " * "world");
