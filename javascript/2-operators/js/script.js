@@ -18,3 +18,7 @@ console.log(typeof NaN);
 console.log(10 / 0);
 console.log(10 / -0);
 console.log(10 / "hello");
+
+// Strings
+console.log(typeof "hello");
+console.log("Hello, world");
