@@ -42,7 +42,18 @@ console.log(5 > 20);
 // Comparison operators
 console.log(5 != 20);
 console.log(5 >= 20);
-console.log(10 == "10")
-console.log(10 === "10")
-console.log(10 != "10")
-console.log(10 !== "10")
+console.log(10 == "10");
+console.log(10 === "10");
+console.log(10 != "10");
+console.log(10 !== "10");
+
+// Logical operators
+console.log(true && true);
+console.log(true && false);
+console.log(true || false);
+console.log(false || false);
+console.log(!true);
+
+console.log(5 < 10 && "Mateus" == "Matheus");
+console.log(5 < 10 || "Mateus" == "Matheus");
+console.log(!(5 < 10));
