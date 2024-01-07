@@ -30,3 +30,7 @@ console.log("Hello, \tworld");
 
 // Concatenation
 console.log("Hello, " + "world");
+
+// Interpolation
+console.log(`Hello, ${"w" + "o" + "r" + "l" + "d"}`);
+console.log(`Hello, ${console.log("world")}`);
