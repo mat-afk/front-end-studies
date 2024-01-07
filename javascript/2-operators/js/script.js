@@ -34,3 +34,15 @@ console.log("Hello, " + "world");
 // Interpolation
 console.log(`Hello, ${"w" + "o" + "r" + "l" + "d"}`);
 console.log(`Hello, ${console.log("world")}`);
+
+// Boolean
+console.log(typeof true);
+console.log(5 > 20);
+
+// Comparison operators
+console.log(5 != 20);
+console.log(5 >= 20);
+console.log(10 == "10")
+console.log(10 === "10")
+console.log(10 != "10")
+console.log(10 !== "10")
