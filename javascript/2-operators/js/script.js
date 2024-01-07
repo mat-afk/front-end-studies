@@ -59,7 +59,6 @@ console.log(5 < 10 || "Mateus" == "Matheus");
 console.log(!(5 < 10));
 
 // Empty values
-
 console.log(null, typeof null);
 console.log(undefined, typeof undefined);
 console.log(null == undefined);
@@ -67,3 +66,9 @@ console.log(null === undefined);
 console.log(null == 0);
 console.log(null === 0);
 console.log(null >= 0);
+
+// Type conversion
+console.log(5 * null);
+console.log("10" + 1);
+console.log("10" - 1);
+console.log("Hello, " * "world")
