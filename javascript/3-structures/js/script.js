@@ -26,8 +26,15 @@ console.log(_test, $test);
 // Built-in functions
 
 // Prompt
-const firstName = prompt("What's your first name?");
-console.log(`Your name is ${firstName}`);
+// const firstName = prompt("What's your first name?");
+// console.log(`Your name is ${firstName}`);
 
-// Alert
-alert(`Welcome, ${firstName}`);
+// // Alert
+// alert(`Welcome, ${firstName}`);
+
+// Math object and it's functions
+console.log(Math.max(1, 2, 3, 4, 5));
+console.log(Math.min(1, 2, 3, 4, 5));
+console.log(Math.random());
+console.log(Math.floor(3.14));
+console.log(Math.ceil(3.14));
