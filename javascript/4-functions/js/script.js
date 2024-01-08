@@ -36,3 +36,28 @@ function newY() {
 
 newY();
 console.log("Outside the function, the value of y is", y);
+
+// Nested scope
+let m = 5;
+
+function nestedM() {
+  let m = 10;
+
+  function nestedNestedM() {
+    let m = 15;
+    console.log("Inside this function, the value of m is", m);
+
+    function nestedNestedNestedM() {
+      let m = 20;
+      console.log("Inside this function, the value of m is", m);
+    }
+
+    nestedNestedNestedM();
+  }
+
+  nestedNestedM();
+  console.log("Inside this function, the value of m is", m);
+}
+
+nestedM();
+console.log("Outside that function, the value of m is", m);
