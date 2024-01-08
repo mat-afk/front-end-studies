@@ -100,3 +100,19 @@ do {
 for (let k = 0; k < 5; k++) {
   console.log("k is", k);
 }
+
+// Break
+for (let l = 0; l < 5; l++) {
+  if (l === 3) {
+    break;
+  }
+  console.log("l is", l);
+}
+
+// Continue
+for (let n = 0; n < 5; n++) {
+  if (n === 3) {
+    continue;
+  }
+  console.log("n is", n);
+}
