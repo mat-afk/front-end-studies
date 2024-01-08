@@ -28,3 +28,6 @@ console.log(_test, $test);
 // Prompt
 const firstName = prompt("What's your first name?");
 console.log(`Your name is ${firstName}`);
+
+// Alert
+alert(`Welcome, ${firstName}`);
