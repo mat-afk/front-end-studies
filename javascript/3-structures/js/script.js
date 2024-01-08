@@ -45,6 +45,8 @@ console.warn("Warning");
 
 // Control structures
 
+// Conditionals
+
 // If statement
 const m = 10;
 if (m > 5) {
@@ -76,4 +78,25 @@ if (n1 > n2) {
   console.log("n2 is greater than n1");
 } else {
   console.log("n1 and n2 are equal");
+}
+
+// Loops
+
+// While loop
+let i = 0;
+while (i < 5) {
+  console.log("i is", i);
+  i++;
+}
+
+// Do while loop
+let j = 4;
+do {
+  console.log("j is", j);
+  j--;
+} while (j >= 0);
+
+// For loop
+for (let k = 0; k < 5; k++) {
+  console.log("k is", k);
 }
