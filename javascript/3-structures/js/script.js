@@ -116,3 +116,26 @@ for (let n = 0; n < 5; n++) {
   }
   console.log("n is", n);
 }
+
+// Switch statement
+const day = 0;
+switch (day) {
+  case 1:
+    console.log("Today is monday");
+    break;
+  case 2:
+    console.log("Today is tuesday");
+    break;
+  case 3:
+    console.log("Today is wednesday");
+    break;
+  case 4:
+    console.log("Today is thursday");
+    break;
+  case 5:
+    console.log("Today is friday");
+    break;
+  default:
+    console.log("WEEKEND!!!");
+    break;
+}
