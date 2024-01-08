@@ -42,3 +42,38 @@ console.log(Math.ceil(3.14));
 // Console object and it's functions
 console.error("Error");
 console.warn("Warning");
+
+// Control structures
+
+// If statement
+const m = 10;
+if (m > 5) {
+  console.log("M is greater than 5");
+}
+
+const user = "Mateus";
+if (user === "Mateus") {
+  console.log("Welcome, Mateus");
+}
+if (user === "Markiplier") {
+  console.log("Welcome, Markiplier");
+}
+
+// Else statement
+const loggedIn = false;
+if (loggedIn) {
+  console.log("Show the user's profile");
+} else {
+  console.log("Show the login button");
+}
+
+// Else if statement
+const n1 = 1;
+const n2 = 2;
+if (n1 > n2) {
+  console.log("n1 is greater than n2");
+} else if (n2 > n1) {
+  console.log("n2 is greater than n1");
+} else {
+  console.log("n1 and n2 are equal");
+}
