@@ -38,3 +38,7 @@ console.log(Math.min(1, 2, 3, 4, 5));
 console.log(Math.random());
 console.log(Math.floor(3.14));
 console.log(Math.ceil(3.14));
+
+// Console object and it's functions
+console.error("Error");
+console.warn("Warning");
