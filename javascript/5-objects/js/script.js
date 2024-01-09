@@ -141,3 +141,16 @@ shows.forEach((show) => {
   console.log("Genre:", show.genre);
   console.log("Seasons:", show.seasons);
 });
+
+// Includes
+const countries = [
+  "France",
+  "Brazil",
+  "EUA",
+  "New Zeland",
+  "Canada",
+  "Germany",
+];
+
+console.log("Countries", countries);
+console.log("Does countries include Canada?", countries.includes("Canada"));
