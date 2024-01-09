@@ -74,3 +74,9 @@ minion.armour = 30;
 console.log("Character", character);
 console.log("Minion: ", minion);
 console.log("Is character and minion the same object?", character === minion);
+
+// Arrays and loops
+const numbers = [1, 2, 3, 4, 5];
+for (let i = 0; i < numbers.length; i++) {
+  console.log(`numbers[${i}]: ${numbers[i]}`);
+}
