@@ -165,3 +165,13 @@ console.log("Reversed:", items.reverse());
 const username = "                 Markiplier   \n ";
 console.log("Original:", username, "Length:", username.length);
 console.log("Trimmed:", username.trim(), "Length:", username.trim().length);
+
+// PadStart and padend
+let id = "1";
+console.log("id:", id);
+
+newId = id.padStart(5, 0);
+console.log("id after padstart:", newId);
+
+anotherId = id.padEnd(5, 0);
+console.log("id after padend:", anotherId);
