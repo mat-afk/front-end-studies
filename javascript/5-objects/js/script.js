@@ -154,3 +154,9 @@ const countries = [
 
 console.log("Countries", countries);
 console.log("Does countries include Canada?", countries.includes("Canada"));
+
+// Reverse
+const items = ["Chocolate milk", "iPhone", "Nintendo Switch", "Cupcake"];
+
+console.log("Original:", items);
+console.log("Reversed:", items.reverse());
