@@ -175,3 +175,12 @@ console.log("id after padstart:", newId);
 
 anotherId = id.padEnd(5, 0);
 console.log("id after padend:", anotherId);
+
+// Split
+const text = "Hello, everyone, my name is Markiplier";
+const words = text.split(" ");
+const letters = text.split("");
+
+console.log("Text:", text);
+console.log("Words:", words);
+console.log("Letters:", letters);
