@@ -128,3 +128,16 @@ console.log("Programming languages:", programmingLanguages);
 const lastLanguages = programmingLanguages.slice(3);
 
 console.log("Last languages:", lastLanguages);
+
+// For each loop
+const shows = [
+  { title: "The Office", genre: "Comedy", seasons: 9 },
+  { title: "Better Call Saul", genre: "Comedy/Drama", seasons: 6 },
+  { title: "Stranger Things", genre: "Science Fiction/Horror", seasons: 4 },
+];
+
+shows.forEach((show) => {
+  console.log("Title:", show.title);
+  console.log("Genre:", show.genre);
+  console.log("Seasons:", show.seasons);
+});
