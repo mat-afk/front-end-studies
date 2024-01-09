@@ -111,3 +111,20 @@ console.log("Fruits:", fruits);
 
 console.log("Index of Apple:", fruits.indexOf("Apple"));
 console.log("Last index of Apple:", fruits.lastIndexOf("Apple"));
+
+// Slice
+const programmingLanguages = [
+  "JavaScript",
+  "Java",
+  "Python",
+  "PHP",
+  "Go",
+  "Ruby",
+  "Rust",
+];
+
+console.log("Programming languages:", programmingLanguages);
+
+const lastLanguages = programmingLanguages.slice(3);
+
+console.log("Last languages:", lastLanguages);
