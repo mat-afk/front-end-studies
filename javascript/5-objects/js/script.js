@@ -30,3 +30,9 @@ const user = {
 
 console.log(user, typeof user);
 console.log(user.name);
+
+// Creating and deleting properties
+user.lastName = "Cruzatto";
+delete user.city;
+
+console.log(user);
