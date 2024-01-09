@@ -115,7 +115,7 @@ const AddTwo = add(2);
 console.log("The result of the addition is", AddTwo(3));
 
 // Recursion
-const factorial = (n) => { 
+const factorial = (n) => {
   if (n === 0) {
     return 1;
   }
