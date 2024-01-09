@@ -61,3 +61,16 @@ console.log(player);
 console.log(Object.keys(player));
 console.log(Object.values(player));
 console.log(Object.entries(player));
+
+// Mutation
+const minion = character;
+
+console.log("Character", character);
+console.log("Minion: ", minion);
+console.log("Is character and minion the same object?", character === minion);
+
+minion.armour = 30;
+
+console.log("Character", character);
+console.log("Minion: ", minion);
+console.log("Is character and minion the same object?", character === minion);
