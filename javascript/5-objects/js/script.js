@@ -221,3 +221,10 @@ const show = {
 
 const { title, genre, seasons: numberOfSeasons } = show;
 console.log("Title:", title, "Genre:", genre, "Seasons:", numberOfSeasons);
+
+// Destructuring arrays
+const frameworks = ["React", "Vue", "Angular", "Svelte", "Next.Js"];
+
+const [first, second, third, fourth, fifth] = frameworks;
+
+console.log(first, second, third, fourth, fifth);
