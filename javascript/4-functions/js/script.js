@@ -89,7 +89,7 @@ const pow = (n, e) => {
 };
 
 const number = 2;
-const e = 3
+const e = 3;
 console.log(`The square of ${number} is`, pow(number));
 console.log(`${number} to the power of ${e} is`, pow(number, e));
 
@@ -113,3 +113,14 @@ console.log("The result of the addition is", add(1)(2));
 const AddTwo = add(2);
 
 console.log("The result of the addition is", AddTwo(3));
+
+// Recursion
+const factorial = (n) => { 
+  if (n === 0) {
+    return 1;
+  }
+  return n * factorial(n - 1);
+};
+
+const k = 5;
+console.log(`${k}! is ${factorial(k)}`);
