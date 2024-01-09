@@ -188,3 +188,6 @@ console.log("Letters:", letters);
 // Join
 console.log("Words joined:", words.join(" "));
 console.log("Letters joined:", letters.join(""));
+
+// Repeat
+console.log("hello ".repeat(5));
