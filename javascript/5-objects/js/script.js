@@ -200,3 +200,14 @@ const sum = (...nums) => {
 };
 
 console.log("The sum is:", sum(1, 2, 3, 7, 20, 19, 46, 780));
+
+// For... of
+const print = (...args) => {
+  const output = [];
+  for (const arg of args) {
+    output.push(arg);
+  }
+  console.log(output.join(" "));
+};
+
+print("Hello,", "everyone", "my name is", "Markiplier");
