@@ -104,3 +104,10 @@ console.log("Length after unshifting:", j);
 const shifted = games.shift();
 console.log("Games after shifting:", games);
 console.log("Shifted:", shifted);
+
+// indexOf and lastIndexOf
+const fruits = ["Banana", "Apple", "Orange", "Banana", "Apple"];
+console.log("Fruits:", fruits);
+
+console.log("Index of Apple:", fruits.indexOf("Apple"));
+console.log("Last index of Apple:", fruits.lastIndexOf("Apple"));
