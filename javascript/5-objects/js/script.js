@@ -18,3 +18,15 @@ const usersJoined = users.concat(newUsers);
 console.log(usersJoined);
 console.log(usersJoined.indexOf("Mateus"));
 console.log(usersJoined[4].toUpperCase());
+
+// Object Literal
+const user = {
+  name: "Mateus",
+  age: 17,
+  email: "email@email.com",
+  country: "Brazil",
+  city: "São Paulo",
+};
+
+console.log(user, typeof user);
+console.log(user.name);
