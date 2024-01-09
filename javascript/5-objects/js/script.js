@@ -160,3 +160,8 @@ const items = ["Chocolate milk", "iPhone", "Nintendo Switch", "Cupcake"];
 
 console.log("Original:", items);
 console.log("Reversed:", items.reverse());
+
+// Trim
+const username = "                 Markiplier   \n ";
+console.log("Original:", username, "Length:", username.length);
+console.log("Trimmed:", username.trim(), "Length:", username.trim().length);
