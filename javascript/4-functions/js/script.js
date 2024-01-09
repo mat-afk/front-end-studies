@@ -61,3 +61,21 @@ function nestedM() {
 
 nestedM();
 console.log("Outside that function, the value of m is", m);
+
+// Arrow functions
+const evenOrOdd = (n) => {
+  if (n % 2 === 0) {
+    return `${n} is even`;
+  } else {
+    return `${n} is odd`;
+  }
+};
+
+console.log(evenOrOdd(2));
+
+// Implicit return
+
+const sqrt = (n) => n ** 0.5;
+
+const n = 25;
+console.log(`The square root of ${n} is ${sqrt(n)}`);
