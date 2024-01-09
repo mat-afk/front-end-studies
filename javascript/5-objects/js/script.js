@@ -211,3 +211,13 @@ const print = (...args) => {
 };
 
 print("Hello,", "everyone", "my name is", "Markiplier");
+
+// Destructuring objects
+const show = {
+  title: "The Office",
+  genre: "Comedy",
+  seasons: 9,
+};
+
+const { title, genre, seasons: numberOfSeasons } = show;
+console.log("Title:", title, "Genre:", genre, "Seasons:", numberOfSeasons);
