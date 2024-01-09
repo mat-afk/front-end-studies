@@ -87,8 +87,20 @@ console.log("Movies:", movies);
 
 let i = movies.push("The Lord of the Rings", "The Hobbit");
 console.log("Movies after pushing:", movies);
-console.log("Last pushed index:", i);
+console.log("Length after pushing:", i);
 
 const popped = movies.pop();
 console.log("Movies after popping:", movies);
 console.log("Popped:", popped);
+
+// Unshift and shift
+const games = ["League of Legends", "Valorant", "Minecraft"];
+console.log("Games:", games);
+
+let j = games.unshift("Counter Strike", "Overwatch");
+console.log("Games after unshifting:", games);
+console.log("Length after unshifting:", j);
+
+const shifted = games.shift();
+console.log("Games after shifting:", games);
+console.log("Shifted:", shifted);
