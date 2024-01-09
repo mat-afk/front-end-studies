@@ -79,3 +79,27 @@ const sqrt = (n) => n ** 0.5;
 
 const n = 25;
 console.log(`The square root of ${n} is ${sqrt(n)}`);
+
+// Optional parameters
+
+const pow = (n, e) => {
+  if (!e) {
+    e = 2;
+  }
+
+  return n ** e;
+};
+
+const number = 2;
+const e = 3
+console.log(`The square of ${number} is`, pow(number));
+console.log(`${number} to the power of ${e} is`, pow(number, e));
+
+// Default parameters
+
+const sayHelloTo = (name = "World") => {
+  console.log(`Hello, ${name}!`);
+};
+
+sayHelloTo();
+sayHelloTo("John");
