@@ -228,3 +228,16 @@ const frameworks = ["React", "Vue", "Angular", "Svelte", "Next.Js"];
 const [first, second, third, fourth, fifth] = frameworks;
 
 console.log(first, second, third, fourth, fifth);
+
+// JSON
+const json = '{"title":"Better Call Saul","genre":"Comedy/Drama","seasons": 6}';
+
+console.log(json);
+
+// JSON convertion
+const serie = JSON.parse(json);
+serie.release = 2015;
+console.log(serie);
+
+const newJson = JSON.stringify(serie);
+console.log(newJson);
