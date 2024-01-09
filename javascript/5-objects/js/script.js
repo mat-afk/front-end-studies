@@ -184,3 +184,7 @@ const letters = text.split("");
 console.log("Text:", text);
 console.log("Words:", words);
 console.log("Letters:", letters);
+
+// Join
+console.log("Words joined:", words.join(" "));
+console.log("Letters joined:", letters.join(""));
