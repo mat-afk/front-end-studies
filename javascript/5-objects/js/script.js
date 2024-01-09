@@ -80,3 +80,15 @@ const numbers = [1, 2, 3, 4, 5];
 for (let i = 0; i < numbers.length; i++) {
   console.log(`numbers[${i}]: ${numbers[i]}`);
 }
+
+// Push and pop
+const movies = ["The Avengers", "The Dark Knight", "The Matrix"];
+console.log("Movies:", movies);
+
+let i = movies.push("The Lord of the Rings", "The Hobbit");
+console.log("Movies after pushing:", movies);
+console.log("Last pushed index:", i);
+
+const popped = movies.pop();
+console.log("Movies after popping:", movies);
+console.log("Popped:", popped);
