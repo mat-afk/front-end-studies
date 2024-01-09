@@ -50,9 +50,14 @@ console.log("Is character an instance of Object?", character instanceof Object);
 const player = {
   name: "Ezreal",
   class: "Marksman",
-  inventory: ["Doran's Blade", "Health Potion", "Mana Potion"],
+  inventory: ["Doran's Blade", "Health Potion", "Manamune"],
 };
 
 Object.assign(player, character);
 
 console.log(player);
+
+// Object methods
+console.log(Object.keys(player));
+console.log(Object.values(player));
+console.log(Object.entries(player));
