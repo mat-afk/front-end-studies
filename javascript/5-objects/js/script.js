@@ -36,3 +36,23 @@ user.lastName = "Cruzatto";
 delete user.city;
 
 console.log(user);
+
+// Object class and copying object literals
+const character = {
+  health: 100,
+  mana: 50,
+  level: 1,
+};
+
+console.log(character);
+console.log("Is character an instance of Object?", character instanceof Object);
+
+const player = {
+  name: "Ezreal",
+  class: "Marksman",
+  inventory: ["Doran's Blade", "Health Potion", "Mana Potion"],
+};
+
+Object.assign(player, character);
+
+console.log(player);
