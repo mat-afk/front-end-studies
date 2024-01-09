@@ -74,14 +74,12 @@ const evenOrOdd = (n) => {
 console.log(evenOrOdd(2));
 
 // Implicit return
-
 const sqrt = (n) => n ** 0.5;
 
 const n = 25;
 console.log(`The square root of ${n} is ${sqrt(n)}`);
 
 // Optional parameters
-
 const pow = (n, e) => {
   if (!e) {
     e = 2;
@@ -96,10 +94,22 @@ console.log(`The square of ${number} is`, pow(number));
 console.log(`${number} to the power of ${e} is`, pow(number, e));
 
 // Default parameters
-
 const sayHelloTo = (name = "World") => {
   console.log(`Hello, ${name}!`);
 };
 
 sayHelloTo();
 sayHelloTo("John");
+
+// Closure
+function add(n1) {
+  return (n2) => {
+    return n1 + n2;
+  };
+}
+
+console.log("The result of the addition is", add(1)(2));
+
+const AddTwo = add(2);
+
+console.log("The result of the addition is", AddTwo(3));
