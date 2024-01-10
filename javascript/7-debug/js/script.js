@@ -45,10 +45,17 @@ console.log(validate("123"));
 // Exceptions
 function divide(a, b) {
   if (b === 0) {
-    throw new Error("You cannot divide by zero.");
+    throw new Error("you cannot divide by zero.");
   }
 
   return a / b;
 }
 
 // divide(1, 0);
+
+// Try... catch
+try {
+  divide(1, 0);
+} catch (error) {
+  console.log("Runtime Exception:", error.message);
+}
