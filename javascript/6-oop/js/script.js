@@ -185,3 +185,6 @@ const dog = new Dog("Godzilla", "Corgi");
 console.log("Creating new Dog:", dog, "that extends Animal");
 dog.eat();
 dog.bark();
+
+// Instance of
+console.log(`Is ${dog.name} an instance of Dog? ${dog instanceof Dog}`);
