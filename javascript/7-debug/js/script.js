@@ -16,3 +16,13 @@ for (let i = 0; i < b; i++) {
   a += i + 2;
   console.log(a);
 }
+
+// Debugger
+debugger;
+
+let c = 1;
+let d = 2;
+
+for (let i = 0; i < d; i++) {
+  c += d + i + 2;
+}
