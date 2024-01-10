@@ -74,7 +74,7 @@ User.prototype.login = function () {
 console.log("User prototype:", Object.getPrototypeOf(user2));
 user2.login();
 
-// Classes ES6
+// Classes
 class Show {
   constructor(title, genre, numberOfSeasons) {
     this.title = title;
@@ -90,3 +90,16 @@ class Show {
 const breakingBad = new Show("Breaking Bad", "Drama", 5);
 console.log("Instantiating:", breakingBad);
 breakingBad.play();
+
+// Overriding methods and properties
+Show.prototype.play = function () {
+  console.log("Nothing to play here...");
+};
+
+Show.prototype.genre = "Comedy";
+
+console.log("Overriding methods and properties:");
+Show.prototype.play();
+breakingBad.play();
+console.log("Genre:", breakingBad.genre);
+console.log("Genre:", Object.getPrototypeOf(breakingBad).genre);
