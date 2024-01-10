@@ -115,3 +115,45 @@ class Theater {
 
 const movieTheater = new Theater("Cinemark", "São Paulo");
 console.log("Movie theater:", movieTheater);
+
+// Getters and setters
+class Post {
+  constructor(title, description, author, tags) {
+    this.title = title;
+    this.description = description;
+    this.author = author;
+    this.tags = tags;
+  }
+
+  get getTitle() {
+    return this.title;
+  }
+
+  set setTitle(title) {
+    if (typeof title !== "string") {
+      throw new Error("Title must be a string!");
+    }
+
+    this.title = title;
+  }
+
+  set setTags(tags) {
+    if (!Array.isArray(tags)) {
+      throw new Error("Tags must be an array!");
+    }
+
+    this.tags = tags;
+  }
+}
+
+const post = new Post(
+  "What it is to be a developer at Kiman?",
+  "Learning PL/SQL, Java EE and ReactJS",
+  "Gustavo Lemos",
+  ["JavaScript", "Programming", "Kiman"]
+);
+
+console.log("Post:", post);
+post.setTags = ["JavaScript", "Programming", "Kiman", "Java"];
+console.log("Post after setting new tags:", post);
+console.log("Post title:", post.getTitle);
