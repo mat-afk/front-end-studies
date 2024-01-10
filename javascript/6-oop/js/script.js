@@ -37,6 +37,11 @@ const bool = true;
 console.log(Object.getPrototypeOf(bool));
 
 const admin = Object.create(user);
-console.log(admin);
-console.log(Object.getPrototypeOf(admin));
+console.log("Admin object:", admin);
+console.log("Admin's prototype:", Object.getPrototypeOf(admin));
+
+admin.login = function () {
+  console.log("Admin", this.name, "loggin In...");
+};
+
 admin.login();
