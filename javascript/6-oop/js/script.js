@@ -45,3 +45,23 @@ admin.login = function () {
 };
 
 admin.login();
+
+// Functions constructors
+function createUser(name, password) {
+  const user = Object.create({});
+  user.name = name;
+  user.password = password;
+
+  return user;
+}
+
+const user1 = createUser("Markiplier", "1234");
+console.log("Creating new user:", user1);
+
+function User(name, password) {
+  this.name = name;
+  this.password = password;
+}
+
+const user2 = new User("Gustavo Lemos", "euteamocaramelo");
+console.log("Creating new user:", user2);
