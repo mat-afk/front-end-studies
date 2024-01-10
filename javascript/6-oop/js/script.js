@@ -157,3 +157,31 @@ console.log("Post:", post);
 post.setTags = ["JavaScript", "Programming", "Kiman", "Java"];
 console.log("Post after setting new tags:", post);
 console.log("Post title:", post.getTitle);
+
+// Heritance
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+
+  eat() {
+    console.log(`${this.name} is eating...`);
+  }
+}
+
+class Dog extends Animal {
+  constructor(name, breed) {
+    super(name);
+    this.breed = breed;
+  }
+
+  bark() {
+    console.log(`${this.name} is barking...`);
+  }
+}
+
+const dog = new Dog("Godzilla", "Corgi");
+
+console.log("Creating new Dog:", dog, "that extends Animal");
+dog.eat();
+dog.bark();
