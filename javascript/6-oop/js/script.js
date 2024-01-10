@@ -28,3 +28,15 @@ user.login();
 console.log(user.getName());
 user.setName("Mateus");
 console.log(user.getName());
+
+// Prototypes
+const text = "Hello, world!";
+console.log(Object.getPrototypeOf(text));
+
+const bool = true;
+console.log(Object.getPrototypeOf(bool));
+
+const admin = Object.create(user);
+console.log(admin);
+console.log(Object.getPrototypeOf(admin));
+admin.login();
