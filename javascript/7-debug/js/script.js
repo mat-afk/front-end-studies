@@ -55,7 +55,17 @@ function divide(a, b) {
 
 // Try... catch
 try {
-  divide(1, 0);
+  divide(1, 1);
 } catch (error) {
   console.log("Runtime Exception:", error.message);
+}
+
+// Finally
+const result = 0;
+try {
+  result = divide(1, 0);
+} catch (error) {
+  console.log("Runtime Exception:", error.message);
+} finally {
+  console.log("The result of the division is:", result);
 }
