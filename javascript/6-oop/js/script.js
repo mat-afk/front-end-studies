@@ -103,3 +103,15 @@ Show.prototype.play();
 breakingBad.play();
 console.log("Genre:", breakingBad.genre);
 console.log("Genre:", Object.getPrototypeOf(breakingBad).genre);
+
+// Symbols
+class Theater {
+  constructor(name, city) {
+    this.name = name;
+    this.city = city;
+    this[Symbol("seats")] = 58;
+  }
+}
+
+const movieTheater = new Theater("Cinemark", "São Paulo");
+console.log("Movie theater:", movieTheater);
