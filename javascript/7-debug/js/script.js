@@ -18,7 +18,7 @@ for (let i = 0; i < b; i++) {
 }
 
 // Debugger
-debugger;
+// debugger;
 
 let c = 1;
 let d = 2;
@@ -26,3 +26,18 @@ let d = 2;
 for (let i = 0; i < d; i++) {
   c += d + i + 2;
 }
+
+// Validate user input
+function validate(value) {
+  const input = Number(value);
+
+  if (!typeof value === "number" || isNaN(value)) {
+    console.log("Please enter a number.");
+    return;
+  }
+
+  return input;
+}
+
+console.log(validate("Hello, World!"));
+console.log(validate("123"));
