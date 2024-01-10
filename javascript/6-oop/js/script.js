@@ -73,3 +73,20 @@ User.prototype.login = function () {
 
 console.log("User prototype:", Object.getPrototypeOf(user2));
 user2.login();
+
+// Classes ES6
+class Show {
+  constructor(title, genre, numberOfSeasons) {
+    this.title = title;
+    this.genre = genre;
+    this.numberOfSeasons = numberOfSeasons;
+  }
+
+  play() {
+    console.log(`Playing ${this.title}...`);
+  }
+}
+
+const breakingBad = new Show("Breaking Bad", "Drama", 5);
+console.log("Instantiating:", breakingBad);
+breakingBad.play();
