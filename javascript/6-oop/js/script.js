@@ -65,3 +65,11 @@ function User(name, password) {
 
 const user2 = new User("Gustavo Lemos", "euteamocaramelo");
 console.log("Creating new user:", user2);
+
+// Methods in functions constructors
+User.prototype.login = function () {
+  console.log("User", this.name, "loggin In...");
+};
+
+console.log("User prototype:", Object.getPrototypeOf(user2));
+user2.login();
