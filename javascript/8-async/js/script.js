@@ -64,3 +64,18 @@ resolved
 rejected
   .then((value) => console.log(value))
   .catch((error) => console.log(error));
+
+// Resolving multiple promises
+const promise1 = new Promise((resolve) => {
+  setTimeout(() => {
+    resolve("Promise 1");
+  }, 3000);
+});
+
+const promise2 = new Promise((resolve) => resolve("Promise 2"));
+
+const promise3 = new Promise((reject) => {
+  reject(new Error("Promise 3"));
+});
+
+Promise.all([promise1, promise2, promise3]).then((values) => console.log("All promises:", values));
