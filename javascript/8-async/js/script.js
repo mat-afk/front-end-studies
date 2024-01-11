@@ -42,3 +42,25 @@ Promise.resolve(5 * "Hello, world!")
     }
   })
   .catch((error) => console.log("Error catched:", error.message));
+
+// Rejecting promises
+function checkNumber(number) {
+  return new Promise((resolve, reject) => {
+    number = Number(number);
+    if (isNaN(number) || typeof number !== "number") {
+      reject(new Error("The value is not a number."));
+    }
+    resolve("The promised value is a number.");
+  });
+}
+
+const resolved = checkNumber(5);
+const rejected = checkNumber("Hello, world!");
+
+resolved
+  .then((value) => console.log(value))
+  .catch((error) => console.log(error));
+
+rejected
+  .then((value) => console.log(value))
+  .catch((error) => console.log(error));
