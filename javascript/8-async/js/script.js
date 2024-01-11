@@ -105,3 +105,18 @@ async function delayed() {
 }
 
 delayed();
+
+// Generators
+function* generator() {
+  yield function () {
+    console.log("Hello, world!");
+  };
+  yield 2;
+  yield 3;
+}
+
+const gen = generator();
+
+console.log(gen.next());
+console.log(gen.next());
+console.log(gen.next());
