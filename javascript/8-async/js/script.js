@@ -33,3 +33,12 @@ promise
   );
 
 console.log("Another code");
+
+// Catching promises' errors
+Promise.resolve(5 * "Hello, world!")
+  .then((value) => {
+    if (isNaN(value)) {
+      throw new Error("The value is not a number.");
+    }
+  })
+  .catch((error) => console.log("Error catched:", error.message));
