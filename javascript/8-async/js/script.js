@@ -88,3 +88,20 @@ async function sum(a, b) {
 }
 
 sum(5, 5).then((value) => console.log("The sum is", value));
+
+// Await
+function delay() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("Delayed");
+    }, 5000);
+  });
+}
+
+async function delayed() {
+  console.log("Awaiting...");
+  const value = await delay();
+  console.log(value);
+}
+
+delayed();
