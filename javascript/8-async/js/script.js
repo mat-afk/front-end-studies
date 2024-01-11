@@ -78,4 +78,13 @@ const promise3 = new Promise((reject) => {
   reject(new Error("Promise 3"));
 });
 
-Promise.all([promise1, promise2, promise3]).then((values) => console.log("All promises:", values));
+Promise.all([promise1, promise2, promise3]).then((values) =>
+  console.log("All promises:", values)
+);
+
+// Async functions
+async function sum(a, b) {
+  return a + b;
+}
+
+sum(5, 5).then((value) => console.log("The sum is", value));
