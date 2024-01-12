@@ -78,3 +78,14 @@ console.log("Footer height desconsidering border:", footer.clientHeight);
 
 // Position
 console.log("First product position:", firstProduct.getBoundingClientRect());
+
+// Manipulating styles
+mainContainer.style.color = "blue";
+mainContainer.style.backgroundColor = "#DDD";
+mainContainer.style.padding = "15px";
+
+for (const li of listItems) {
+  li.querySelector("a").style.textDecoration = "none";
+  li.querySelector("a").style.color = "#000";
+  li.style.listStyle = "none";
+}
