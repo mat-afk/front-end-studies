@@ -98,5 +98,27 @@ window.addEventListener("load", () => {
 
 window.addEventListener("beforeunload", (e) => {
   e.preventDefault();
-  e.returnValue = "Are you sure you want to leave?";
+  //   e.returnValue = "Are you sure you want to leave?";
 });
+
+// Debounce
+const debounce = (callback, delay) => {
+  let timeout;
+
+  return (...args) => {
+    if (timeout) {
+      clearTimeout(timeout);
+    }
+
+    timeout = setTimeout(() => {
+      callback(...args);
+    }, delay);
+  };
+};
+
+window.addEventListener(
+  "mousemove",
+  debounce(() => {
+    console.log("Mouse movement debounced");
+  }, 400)
+);
