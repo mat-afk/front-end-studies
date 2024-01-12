@@ -40,3 +40,13 @@ propagationBtn.addEventListener("click", (event) => {
 propagationContainer.addEventListener("click", () => {
   console.log("Propagation container listening...");
 });
+
+// Prevent default
+const link = document.querySelector("a");
+
+link.addEventListener("click", (event) => {
+  event.preventDefault();
+  console.log(
+    "Why are we still here? Just to suffer? (Default event prevented)"
+  );
+});
