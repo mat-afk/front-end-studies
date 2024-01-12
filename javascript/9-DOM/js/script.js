@@ -67,3 +67,11 @@ firstLink.setAttribute("href", "https://www.google.com");
 firstLink.setAttribute("target", "_blank");
 
 console.log("First link href:", firstLink.getAttribute("href"));
+
+// Width and height
+const footer = document.querySelector("footer");
+console.log("Footer width:", footer.offsetWidth);
+console.log("Footer height:", footer.offsetHeight);
+
+console.log("Footer width desconsidering border:", footer.clientWidth);
+console.log("Footer height desconsidering border:", footer.clientHeight);
