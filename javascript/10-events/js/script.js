@@ -27,3 +27,16 @@ const clickMeTitle = document.querySelector("#click-me-title");
 clickMeTitle.addEventListener("click", (event) => {
   console.log(event);
 });
+
+// Propagation
+const propagationContainer = document.querySelector("#propagation-container");
+const propagationBtn = document.querySelector("#propagation-container button");
+
+propagationBtn.addEventListener("click", (event) => {
+  event.stopPropagation();
+  console.log("Propagation button listening...");
+});
+
+propagationContainer.addEventListener("click", () => {
+  console.log("Propagation container listening...");
+});
