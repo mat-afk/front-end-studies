@@ -55,3 +55,20 @@ link.addEventListener("click", (event) => {
 document.addEventListener("keydown", (e) => {
   console.log(`Listening to ${e.key}`);
 });
+
+// Mouse events
+const dblClick = document.querySelector("#double-click");
+
+dblClick.addEventListener("dblclick", () => {
+  console.log("Double clicked!");
+});
+
+const mouseOver = document.querySelector("#mouse-over");
+
+mouseOver.addEventListener("mouseover", () => {
+  console.log("Mouse over!");
+});
+
+document.addEventListener("mousemove", (e) => {
+  //   console.log(`Mouse coordinates: (${e.clientX}, ${e.clientY})`);
+});
