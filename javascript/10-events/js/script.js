@@ -90,3 +90,13 @@ focusInput.addEventListener("focus", () => {
 focusInput.addEventListener("blur", () => {
   console.log("Bluring...");
 });
+
+// Load event
+window.addEventListener("load", () => {
+  console.log("Page loaded successfully =)");
+});
+
+window.addEventListener("beforeunload", (e) => {
+  e.preventDefault();
+  e.returnValue = "Are you sure you want to leave?";
+});
