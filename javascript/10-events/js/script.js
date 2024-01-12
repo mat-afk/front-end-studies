@@ -72,3 +72,21 @@ mouseOver.addEventListener("mouseover", () => {
 document.addEventListener("mousemove", (e) => {
   //   console.log(`Mouse coordinates: (${e.clientX}, ${e.clientY})`);
 });
+
+// Scroll events
+window.addEventListener("scroll", (e) => {
+  if (window.scrollY > 200) {
+    console.log("You scrolled more than 200px");
+  }
+});
+
+// Focus events
+const focusInput = document.querySelector("#focus-input");
+
+focusInput.addEventListener("focus", () => {
+  console.log("Focusing...");
+});
+
+focusInput.addEventListener("blur", () => {
+  console.log("Bluring...");
+});
