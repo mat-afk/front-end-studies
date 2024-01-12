@@ -20,3 +20,10 @@ removeBtn.addEventListener("click", () => {
   console.log("Removing event handler...");
   eventBtn.removeEventListener("click", eventHandler);
 });
+
+// Event object
+const clickMeTitle = document.querySelector("#click-me-title");
+
+clickMeTitle.addEventListener("click", (event) => {
+  console.log(event);
+});
