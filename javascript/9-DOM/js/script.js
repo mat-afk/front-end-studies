@@ -59,3 +59,11 @@ firstProduct.replaceChild(h2, document.getElementsByTagName("h2")[0]);
 // 4. Creating text nodes
 const text = document.createTextNode("I am a new text node");
 mainContainer.appendChild(text);
+
+// Manipulating attributes
+const firstLink = navLinks.querySelector("a");
+
+firstLink.setAttribute("href", "https://www.google.com");
+firstLink.setAttribute("target", "_blank");
+
+console.log("First link href:", firstLink.getAttribute("href"));
