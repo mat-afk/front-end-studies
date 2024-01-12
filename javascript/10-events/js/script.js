@@ -50,3 +50,8 @@ link.addEventListener("click", (event) => {
     "Why are we still here? Just to suffer? (Default event prevented)"
   );
 });
+
+// Keyboard events
+document.addEventListener("keydown", (e) => {
+  console.log(`Listening to ${e.key}`);
+});
