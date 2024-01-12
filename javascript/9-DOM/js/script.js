@@ -29,3 +29,33 @@ console.log("Element selected by CSS selector:", mainContainer);
 
 const productsQuery = document.querySelectorAll(".product");
 console.log("Elements selected by CSS selector:", productsQuery);
+
+// Manipulating elements
+
+// 1. Inserting before
+const p = document.createElement("p");
+p.textContent = "I am a new paragraph";
+
+const header = title.parentElement;
+header.insertBefore(p, title);
+
+// 2. Appending
+const li = document.createElement("li");
+const link = document.createElement("a");
+link.href = "#";
+link.textContent = "New Link";
+li.appendChild(link);
+
+const navLinks = document.querySelector("nav ul");
+navLinks.appendChild(li);
+
+// 3. Replacing
+const h2 = document.createElement("h2");
+h2.textContent = "New Product";
+
+const firstProduct = document.querySelector(".product");
+firstProduct.replaceChild(h2, document.getElementsByTagName("h2")[0]);
+
+// 4. Creating text nodes
+const text = document.createTextNode("I am a new text node");
+mainContainer.appendChild(text);
