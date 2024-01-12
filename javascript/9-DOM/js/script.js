@@ -75,3 +75,6 @@ console.log("Footer height:", footer.offsetHeight);
 
 console.log("Footer width desconsidering border:", footer.clientWidth);
 console.log("Footer height desconsidering border:", footer.clientHeight);
+
+// Position
+console.log("First product position:", firstProduct.getBoundingClientRect());
