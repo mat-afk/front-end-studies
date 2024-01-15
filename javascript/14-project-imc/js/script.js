@@ -48,6 +48,7 @@ const weightInput = document.querySelector("#weight");
 
 const calculateBtn = document.querySelector("#calc-btn");
 const clearBtn = document.querySelector("#clear-btn");
+const backBtn = document.querySelector("#back-btn");
 
 const bmiNumber = document.querySelector("#bmi-number span");
 const bmiInfo = document.querySelector("#bmi-info span");
@@ -92,7 +93,14 @@ function clearInputs() {
   weightInput.value = "";
 }
 
+function toggleContainers() {
+  calculateContainer.classList.toggle("hide");
+  resultContainer.classList.toggle("hide");
+}
+
 // Events
+
+createTable(data);
 
 [heightInput, weightInput].forEach((input) => {
   input.addEventListener("input", (e) => {
@@ -102,8 +110,6 @@ function clearInputs() {
 
 calculateBtn.addEventListener("click", (e) => {
   e.preventDefault();
-
-  createTable(data);
 
   const height = heightInput.value.replace(",", ".");
   const weight = weightInput.value.replace(",", ".");
@@ -124,11 +130,36 @@ calculateBtn.addEventListener("click", (e) => {
     }
   });
 
-  calculateContainer.classList.add("hide");
-  resultContainer.classList.remove("hide");
+  toggleContainers();
 });
 
 clearBtn.addEventListener("click", (e) => {
   e.preventDefault();
   clearInputs();
+});
+
+backBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  clearInputs();
+
+  toggleContainers();
+
+  bmiNumber.innerHTML = "";
+  bmiNumber.classList.remove(
+    "underweight",
+    "normal",
+    "overweight",
+    "obesity",
+    "severe-obesity"
+  );
+
+  bmiInfo.innerHTML = "";
+  bmiInfo.classList.remove(
+    "underweight",
+    "normal",
+    "overweight",
+    "obesity",
+    "severe-obesity"
+  );
 });
