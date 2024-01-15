@@ -79,23 +79,40 @@ function createTable(data) {
   });
 }
 
+function calculateBMI(height, weight) {
+  return weight / height ** 2;
+}
+
+function replaceInvalidDigits(text) {
+  return text.replace(/[^0-9,.]/g, "");
+}
+
+function clearInputs() {
+  heightInput.value = "";
+  weightInput.value = "";
+}
+
 // Events
+
+[heightInput, weightInput].forEach((input) => {
+  input.addEventListener("input", (e) => {
+    e.target.value = replaceInvalidDigits(e.target.value);
+  });
+});
 
 calculateBtn.addEventListener("click", (e) => {
   e.preventDefault();
 
   createTable(data);
 
-  const height = heightInput.value;
-  const weight = weightInput.value;
-  console.log(height, weight);
+  const height = heightInput.value.replace(",", ".");
+  const weight = weightInput.value.replace(",", ".");
 
   if (!height || !weight || height <= 0 || weight <= 0) {
     return;
   }
 
-  const bmi = weight / height ** 2;
-  console.log(bmi);
+  const bmi = calculateBMI(height, weight);
 
   data.forEach((element) => {
     if (bmi >= element.min && bmi <= element.max) {
@@ -104,11 +121,14 @@ calculateBtn.addEventListener("click", (e) => {
 
       bmiInfo.innerHTML = element.classification;
       bmiInfo.classList.add(element.class || "normal");
-
-      console.log(bmiNumber, bmiInfo);
     }
   });
 
   calculateContainer.classList.add("hide");
   resultContainer.classList.remove("hide");
+});
+
+clearBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  clearInputs();
 });
