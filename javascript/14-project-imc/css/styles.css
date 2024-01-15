@@ -89,12 +89,12 @@ button:hover {
   flex-direction: column;
 }
 
-#imc-number {
+#bmi-number {
   font-size: 2.4rem;
   margin-bottom: 0.6rem;
 }
 
-#imc-info {
+#bmi-info {
   font-size: 1.4rem;
   color: #ccc;
 }
@@ -104,7 +104,7 @@ button:hover {
   color: #dfdfdf;
 }
 
-#imc-table {
+#bmi-table {
   margin: 1.5rem 0;
   font-size: 0.8rem;
 }
@@ -137,22 +137,22 @@ button:hover {
   align-self: center;
 }
 
-.under {
+.underweight {
   color: #038cfc;
 }
 
-.healthy {
+.normal {
   color: #12db34;
 }
 
-.over {
+.overweight {
   color: #dbce12;
 }
 
-.obese {
+.obesity {
   color: #db6212;
 }
 
-.severely-obese {
+.severe-obesity {
   color: #db1912;
 }
