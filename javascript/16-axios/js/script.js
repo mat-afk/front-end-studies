@@ -6,8 +6,8 @@ console.log(axios);
 // GET
 const getUsers = async () => {
   try {
-    const response = await axios.get(
-      "https://jsonplaceholder.typicode.com/users",
+    const response = await axiosFetch.get(
+      "/users",
 
       //   Headers
       {
@@ -55,8 +55,8 @@ const bodyInput = document.querySelector("#body");
 
 const postUser = async () => {
   try {
-    const response = await axios.post(
-      "https://jsonplaceholder.typicode.com/posts",
+    const response = await axiosFetch.post(
+      "/posts",
       {
         title: titleInput.value,
         body: bodyInput.value,
