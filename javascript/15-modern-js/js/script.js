@@ -47,3 +47,31 @@ const saleProducts = products.map((product) => {
 
 console.log("The products are", products);
 console.log("The maped sale products are", saleProducts);
+
+// Template literals
+const username = "Markiplier";
+const message = `Welcome, interpolated ${username}!`;
+console.log(message);
+
+// Destructuring
+const user = {
+  name: "Michael Scott",
+  age: 40,
+  address: {
+    city: "Scranton",
+    country: "USA",
+  },
+};
+
+const { name: managerName, age, address } = user;
+console.log("The user is:", user);
+console.log("The destructured user is:", managerName, age, address);
+
+// Spread operator
+const newUser = { ...user, name: "Dwight Schrute" };
+console.log("The new spread user is:", newUser);
+
+const somePrimeNumbers = [3, 5, 7, 11, 13, 17];
+const morePrimeNumbers = [19, 23, 29, 31, 37, 41];
+const allPrimeNumbers = [2, ...somePrimeNumbers, ...morePrimeNumbers, 43];
+console.log("The spread prime numbers are:", allPrimeNumbers);
