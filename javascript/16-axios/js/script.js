@@ -1,7 +1,9 @@
 // Axios
 console.log(axios);
 
-// Requests and responses
+// Http requests and responses
+
+// GET
 const getUsers = async () => {
   try {
     const response = await axios.get(
@@ -45,3 +47,31 @@ const printUsers = async () => {
 };
 
 printUsers();
+
+// POST
+const form = document.querySelector("#post-form");
+const titleInput = document.querySelector("#title");
+const bodyInput = document.querySelector("#body");
+
+const postUser = async () => {
+  try {
+    const response = await axios.post(
+      "https://jsonplaceholder.typicode.com/posts",
+      {
+        title: titleInput.value,
+        body: bodyInput.value,
+        userId: 1,
+      }
+    );
+    console.log(response);
+
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  postUser();
+});
