@@ -75,3 +75,31 @@ const somePrimeNumbers = [3, 5, 7, 11, 13, 17];
 const morePrimeNumbers = [19, 23, 29, 31, 37, 41];
 const allPrimeNumbers = [2, ...somePrimeNumbers, ...morePrimeNumbers, 43];
 console.log("The spread prime numbers are:", allPrimeNumbers);
+
+// Classes and inheritance
+
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+
+  eat() {
+    console.log(`${this.name} is eating like an Animal: Nom nom nom!`);
+  }
+}
+
+class Dog extends Animal {
+  constructor(name, breed) {
+    super(name);
+    this.breed = breed;
+  }
+
+  bark() {
+    console.log(`${this.name} is barking like a Dog: Woof!`);
+  }
+}
+
+const dog = new Dog("Snoopy", "Beagle");
+console.log("The new adopted dog is:", dog);
+dog.eat();
+dog.bark();
