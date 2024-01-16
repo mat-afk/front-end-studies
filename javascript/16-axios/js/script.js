@@ -5,7 +5,14 @@ console.log(axios);
 const getUsers = async () => {
   try {
     const response = await axios.get(
-      "https://jsonplaceholder.typicode.com/users"
+      "https://jsonplaceholder.typicode.com/users",
+
+      //   Headers
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
     );
 
     console.log(response);
