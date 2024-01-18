@@ -69,6 +69,7 @@ const editTask = (task) => {
 
 const removeTask = (task) => {
   task.remove();
+  deleteTask(task.querySelector("h3").innerHTML);
 };
 
 const getSearchedTasks = (term) => {
@@ -164,6 +165,11 @@ const getTasksFromLocalStorage = () => {
   return JSON.parse(tasks);
 };
 
+const loadTasks = () => {
+  const tasks = getTasksFromLocalStorage();
+  tasks.forEach((task) => addTask(task.task, task.done, false));
+};
+
 const saveTask = (task) => {
   const tasks = getTasksFromLocalStorage();
 
@@ -171,3 +177,13 @@ const saveTask = (task) => {
 
   localStorage.setItem("tasks", JSON.stringify(tasks));
 };
+
+const deleteTask = (task) => {
+  const tasks = getTasksFromLocalStorage();
+
+  const updatedTasks = tasks.filter((t) => t.task !== task);
+
+  localStorage.setItem("tasks", JSON.stringify(updatedTasks));
+};
+
+loadTasks();
