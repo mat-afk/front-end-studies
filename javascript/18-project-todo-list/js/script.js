@@ -4,7 +4,10 @@ const todoInput = document.querySelector("#todo-input");
 const todoList = document.querySelector("#todo-list");
 const editForm = document.querySelector("#edit-form");
 const editInput = document.querySelector("#edit-input");
+const finishEditBtn = document.querySelector("#finish-edit-btn");
 const cancelEditBtn = document.querySelector("#cancel-edit-btn");
+
+let oldTask = "";
 
 // Functions
 const saveTask = (task) => {
@@ -33,6 +36,32 @@ const saveTask = (task) => {
   todoList.appendChild(div);
 };
 
+const toggleEditForm = () => {
+  editForm.classList.toggle("hide");
+  todoForm.classList.toggle("hide");
+  todoList.classList.toggle("hide");
+};
+
+const finishTask = (task) => {
+  task.classList.toggle("done");
+};
+
+const editTask = (task) => {
+  toggleEditForm();
+
+  let taskTitle;
+
+  if (task && task.querySelector("h3"))
+    taskTitle = task.querySelector("h3").innerHTML;
+
+  editInput.value = taskTitle;
+  oldTask = taskTitle;
+};
+
+const removeTask = (task) => {
+  task.remove();
+};
+
 // Event listeners
 todoForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -45,21 +74,18 @@ todoForm.addEventListener("submit", (e) => {
   todoInput.focus();
 });
 
-const finishTask = (task) => {
-  task.classList.toggle("done");
-};
-
-const removeTask = (task) => {
-  task.remove();
-};
-
-document.addEventListener("click", (e) => {
+todoList.addEventListener("click", (e) => {
   e.preventDefault();
 
   const target = e.target;
-  const task = target.closest("div");
+  const taskDiv = target.closest("div");
 
-  if (target.classList.contains("finish-btn")) finishTask(task);
-  //   if (target.classList.contains("edit-btn")) editTask(task);
-  if (target.classList.contains("remove-btn")) removeTask(task);
+  if (target.classList.contains("finish-btn")) finishTask(taskDiv);
+  if (target.classList.contains("edit-btn")) editTask(taskDiv);
+  if (target.classList.contains("remove-btn")) removeTask(taskDiv);
+});
+
+cancelEditBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  toggleEditForm();
 });
