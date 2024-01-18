@@ -53,6 +53,8 @@ const toggleEditForm = () => {
 
 const finishTask = (task) => {
   task.classList.toggle("done");
+  const taskTitle = task.querySelector("h3").innerHTML;
+  updateTasks(taskTitle);
 };
 
 const editTask = (task) => {
@@ -133,6 +135,8 @@ editForm.addEventListener("submit", (e) => {
     }
   });
 
+  updateTasks(oldTask, newTask);
+
   toggleEditForm();
 });
 
@@ -184,6 +188,19 @@ const deleteTask = (task) => {
   const updatedTasks = tasks.filter((t) => t.task !== task);
 
   localStorage.setItem("tasks", JSON.stringify(updatedTasks));
+};
+
+const updateTasks = (oldTask, newTask = oldTask) => {
+  const tasks = getTasksFromLocalStorage();
+
+  tasks.map((t) => {
+    if (t.task === oldTask) {
+      t.done = !t.done;
+      t.task = newTask;
+    }
+  });
+
+  localStorage.setItem("tasks", JSON.stringify(tasks));
 };
 
 loadTasks();
