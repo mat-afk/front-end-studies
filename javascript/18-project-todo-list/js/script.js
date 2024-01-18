@@ -15,7 +15,7 @@ const filterSelect = document.querySelector("#filter-select");
 let oldTask = "";
 
 // Functions
-const saveTask = (task) => {
+const addTask = (task, done = false, save = true) => {
   const div = document.createElement("div");
   div.classList.add("task");
 
@@ -37,6 +37,10 @@ const saveTask = (task) => {
   removeButton.classList.add("remove-btn");
   removeButton.innerHTML = '<i class="fa-solid fa-xmark"></i>';
   div.appendChild(removeButton);
+
+  // Local storage
+  if (done) div.classList.add("done");
+  if (save) saveTask({ task, done });
 
   todoList.appendChild(div);
 };
@@ -97,7 +101,7 @@ todoForm.addEventListener("submit", (e) => {
 
   const task = todoInput.value.trim();
   if (!task) return;
-  saveTask(task);
+  addTask(task);
 
   todoInput.value = "";
   todoInput.focus();
@@ -153,3 +157,17 @@ filterSelect.addEventListener("change", (e) => {
 
   filterTasks(filter);
 });
+
+// Local Storage
+const getTasksFromLocalStorage = () => {
+  const tasks = localStorage.getItem("tasks") || "[]";
+  return JSON.parse(tasks);
+};
+
+const saveTask = (task) => {
+  const tasks = getTasksFromLocalStorage();
+
+  tasks.push(task);
+
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+};
