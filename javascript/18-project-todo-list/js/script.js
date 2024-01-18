@@ -77,6 +77,20 @@ const getSearchedTasks = (term) => {
   });
 };
 
+const filterTasks = (filter) => {
+  const tasks = todoList.querySelectorAll(".task");
+
+  tasks.forEach((task) => {
+    task.style.display = "flex";
+
+    if (filter === "done" && !task.classList.contains("done")) {
+      task.style.display = "none";
+    } else if (filter === "todo" && task.classList.contains("done")) {
+      task.style.display = "none";
+    }
+  });
+};
+
 // Event listeners
 todoForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -132,4 +146,10 @@ eraseBtn.addEventListener("click", (e) => {
   e.preventDefault();
   searchInput.value = "";
   searchInput.dispatchEvent(new Event("keyup"));
+});
+
+filterSelect.addEventListener("change", (e) => {
+  const filter = e.target.value;
+
+  filterTasks(filter);
 });
