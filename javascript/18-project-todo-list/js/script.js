@@ -85,6 +85,23 @@ todoList.addEventListener("click", (e) => {
   if (target.classList.contains("remove-btn")) removeTask(taskDiv);
 });
 
+editForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const newTask = editInput.value.trim();
+  if (!newTask) return;
+
+  const tasks = todoList.querySelectorAll(".task");
+
+  tasks.forEach((task) => {
+    if (task.querySelector("h3").innerHTML === oldTask) {
+      task.querySelector("h3").innerHTML = newTask;
+    }
+  });
+
+  toggleEditForm();
+});
+
 cancelEditBtn.addEventListener("click", (e) => {
   e.preventDefault();
   toggleEditForm();
