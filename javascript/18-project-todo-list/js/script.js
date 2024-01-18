@@ -2,10 +2,15 @@
 const todoForm = document.querySelector("#todo-form");
 const todoInput = document.querySelector("#todo-input");
 const todoList = document.querySelector("#todo-list");
+
 const editForm = document.querySelector("#edit-form");
 const editInput = document.querySelector("#edit-input");
 const finishEditBtn = document.querySelector("#finish-edit-btn");
 const cancelEditBtn = document.querySelector("#cancel-edit-btn");
+
+const searchInput = document.querySelector("#search-input");
+const eraseBtn = document.querySelector("#erase-btn");
+const filterSelect = document.querySelector("#filter-select");
 
 let oldTask = "";
 
@@ -62,6 +67,16 @@ const removeTask = (task) => {
   task.remove();
 };
 
+const getSearchedTasks = (term) => {
+  const tasks = todoList.querySelectorAll(".task");
+  tasks.forEach((task) => {
+    const title = task.querySelector("h3").innerHTML.toLowerCase();
+
+    task.style.display = "flex";
+    if (!title.includes(term)) task.style.display = "none";
+  });
+};
+
 // Event listeners
 todoForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -105,4 +120,16 @@ editForm.addEventListener("submit", (e) => {
 cancelEditBtn.addEventListener("click", (e) => {
   e.preventDefault();
   toggleEditForm();
+});
+
+searchInput.addEventListener("keyup", (e) => {
+  const term = e.target.value.trim();
+
+  getSearchedTasks(term.toLowerCase());
+});
+
+eraseBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  searchInput.value = "";
+  searchInput.dispatchEvent(new Event("keyup"));
 });
