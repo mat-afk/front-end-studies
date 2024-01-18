@@ -149,7 +149,7 @@ select {
 
 /* To-do list */
 
-.todo {
+.task {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -158,12 +158,12 @@ select {
   transition: 0.3s;
 }
 
-.todo h3 {
+.task h3 {
   flex: 1;
   font-size: 0.9rem;
 }
 
-.todo button {
+.task button {
   margin-left: 0.4rem;
 }
 
