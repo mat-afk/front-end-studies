@@ -6,7 +6,14 @@
     <title>To-do List JS</title>
     <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css" />
-    <!-- Font awesome -->
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -19,9 +26,9 @@
   </head>
   <body>
     <div class="todo-container">
-      <head>
+      <header>
         <h1>To-do List JS</h1>
-      </head>
+      </header>
       <form id="todo-form">
         <p>Adicione uma tarefa</p>
         <div class="form-control">
@@ -30,16 +37,16 @@
             id="todo-input"
             placeholder="No que está pensando?"
           />
-          <button type="submit">
-            <i class="fa-thin fa-plus"></i>
+          <button type="submit" id="add-todo-btn">
+            <i class="fa-solid fa-plus"></i>
           </button>
         </div>
       </form>
-      <form id="edit-form" class="hide">
+      <form id="edit-form">
         <p>Edite sua tarefa</p>
         <div class="form-control">
           <input type="text" id="edit-input" />
-          <button type="submit">
+          <button type="submit" id="finish-edit-btn">
             <i class="fa-solid fa-check-double"></i>
           </button>
         </div>
