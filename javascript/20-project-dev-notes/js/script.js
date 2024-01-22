@@ -30,6 +30,22 @@ const clearNotes = () => {
   notesContainer.innerHTML = "";
 };
 
+const copyNote = (note) => {
+  const notes = getNotes();
+  const target = notes.find((n) => n.id === note.id);
+
+  const newNote = {
+    id: generateId(),
+    content: target.content,
+    fixed: false,
+  };
+
+  const noteElement = createNote(newNote);
+  notesContainer.appendChild(noteElement);
+
+  saveNote(newNote);
+};
+
 const createNote = (note) => {
   const div = document.createElement("div");
   div.classList.add("note");
@@ -55,6 +71,15 @@ const createNote = (note) => {
     note.fixed = !note.fixed;
     saveNote(note);
     loadNotes();
+  });
+
+  xIcon.addEventListener("click", () => {
+    deleteNote(note);
+    notesContainer.removeChild(div);
+  });
+
+  copyIcon.addEventListener("click", () => {
+    copyNote(note);
   });
 
   if (note.fixed) {
@@ -88,6 +113,11 @@ const loadNotes = () => {
     const noteElement = createNote(note);
     notesContainer.appendChild(noteElement);
   });
+};
+
+const deleteNote = (note) => {
+  const notes = getNotes().filter((n) => n.id !== note.id);
+  localStorage.setItem("notes", JSON.stringify(notes));
 };
 
 loadNotes();
