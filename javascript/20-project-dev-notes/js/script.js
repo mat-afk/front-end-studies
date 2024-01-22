@@ -2,6 +2,7 @@
 const notesContainer = document.querySelector("#notes-container");
 const noteInput = document.querySelector("#note-content");
 const addNoteBtn = document.querySelector("#add-note");
+const searchInput = document.querySelector("#search-input");
 
 // Functions
 const addNote = () => {
@@ -96,6 +97,29 @@ const createNote = (note) => {
 
 // Event listeners
 addNoteBtn.addEventListener("click", () => addNote());
+
+searchInput.addEventListener("input", () => {
+  if (searchInput.value === "") {
+    loadNotes();
+    return;
+  }
+
+  const targetNotes = getNotes().filter((note) =>
+    note.content.toLowerCase().includes(searchInput.value.toLowerCase())
+  );
+
+  clearNotes();
+  targetNotes.forEach((note) => {
+    const noteElement = createNote(note);
+    notesContainer.appendChild(noteElement);
+  });
+});
+
+noteInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    addNote();
+  }
+});
 
 // Local storage
 const getNotes = () => {
