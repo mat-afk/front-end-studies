@@ -82,6 +82,11 @@ const createNote = (note) => {
     copyNote(note);
   });
 
+  textarea.addEventListener("input", () => {
+    note.content = textarea.value;
+    saveNote(note);
+  });
+
   if (note.fixed) {
     div.classList.toggle("pinned");
   }
