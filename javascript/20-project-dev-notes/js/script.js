@@ -15,8 +15,11 @@ const addNote = () => {
   };
 
   const noteElement = createNote(note);
-
   notesContainer.appendChild(noteElement);
+
+  saveNote(note);
+
+  noteInput.value = "";
 };
 
 const generateId = () => {
@@ -49,3 +52,25 @@ const createNote = (note) => {
 
 // Event listeners
 addNoteBtn.addEventListener("click", () => addNote());
+
+// Local storage
+const getNotes = () => {
+  const notes = JSON.parse(localStorage.getItem("notes") || "[]");
+  return notes;
+};
+
+const saveNote = (note) => {
+  const notes = getNotes();
+  notes.push(note);
+
+  localStorage.setItem("notes", JSON.stringify(notes));
+};
+
+const loadNotes = () => {
+  getNotes().forEach((note) => {
+    const noteElement = createNote(note);
+    notesContainer.appendChild(noteElement);
+  });
+};
+
+loadNotes();
