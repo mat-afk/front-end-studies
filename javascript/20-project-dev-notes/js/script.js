@@ -47,6 +47,16 @@ const createNote = (note) => {
   copyIcon.classList.add("bi", "bi-file-earmark-plus");
   div.appendChild(copyIcon);
 
+  pinIcon.addEventListener("click", () => {
+    note.fixed = !note.fixed;
+    div.classList.toggle("pinned");
+    saveNote(note);
+  });
+
+  if (note.fixed) {
+    div.classList.toggle("pinned");
+  }
+
   return div;
 };
 
@@ -61,7 +71,9 @@ const getNotes = () => {
 
 const saveNote = (note) => {
   const notes = getNotes();
-  notes.push(note);
+
+  const noteIndex = notes.findIndex((n) => n.id === note.id);
+  noteIndex !== -1 ? (notes[noteIndex] = note) : notes.push(note);
 
   localStorage.setItem("notes", JSON.stringify(notes));
 };
