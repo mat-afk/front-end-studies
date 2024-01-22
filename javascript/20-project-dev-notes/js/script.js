@@ -26,6 +26,10 @@ const generateId = () => {
   return Math.floor(Math.random() * 5000);
 };
 
+const clearNotes = () => {
+  notesContainer.innerHTML = "";
+};
+
 const createNote = (note) => {
   const div = document.createElement("div");
   div.classList.add("note");
@@ -49,8 +53,8 @@ const createNote = (note) => {
 
   pinIcon.addEventListener("click", () => {
     note.fixed = !note.fixed;
-    div.classList.toggle("pinned");
     saveNote(note);
+    loadNotes();
   });
 
   if (note.fixed) {
@@ -66,7 +70,7 @@ addNoteBtn.addEventListener("click", () => addNote());
 // Local storage
 const getNotes = () => {
   const notes = JSON.parse(localStorage.getItem("notes") || "[]");
-  return notes;
+  return notes.sort((a, b) => b.fixed - a.fixed);
 };
 
 const saveNote = (note) => {
@@ -79,6 +83,7 @@ const saveNote = (note) => {
 };
 
 const loadNotes = () => {
+  clearNotes();
   getNotes().forEach((note) => {
     const noteElement = createNote(note);
     notesContainer.appendChild(noteElement);
