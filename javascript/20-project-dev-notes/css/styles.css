@@ -149,3 +149,54 @@ header {
   background-color: #fff;
   color: #3c3c3f;
 }
+
+/* responsive  */
+
+@media (max-width: 768px) {
+  #search-container {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #search-input {
+    width: 100%;
+  }
+
+  #add-note-container {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #add-note-container input {
+    width: 100%;
+  }
+
+  #notes-container {
+    grid-template-columns: repeat(auto-fill, 100%);
+  }
+}
+
+@media (max-width: 450px) {
+  header {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  #search-container {
+    width: 100%;
+  }
+
+  #search-input {
+    width: 100%;
+  }
+
+  #add-note-container {
+    width: 100%;
+    padding: 0 2rem;
+  }
+
+  #notes-container {
+    grid-template-columns: repeat(auto-fill, 100%);
+  }
+}
