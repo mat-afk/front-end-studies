@@ -36,6 +36,7 @@ function App() {
 
         <h2>Props</h2>
         <ShowUserName name="Markiplier" />
+        <h4>Reuse of components</h4>
         <ShowUserName name="Jacksepticeye" />
 
         <h2>Props destructuring</h2>
@@ -43,6 +44,12 @@ function App() {
           user="Gopher guy"
           email="gopher@hotmail.com"
           verificationToken="123456"
+        />
+        <h4>Reuse of components</h4>
+        <Greeting
+          user="Java pal"
+          email="java@yahoo.com"
+          verificationToken="ABCDEF"
         />
       </div>
     </>
