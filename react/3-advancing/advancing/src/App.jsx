@@ -11,6 +11,8 @@ import ConditionalRender from "./components/ConditionalRender";
 import ShowUserName from "./components/ShowUserName";
 // Props destructuring
 import Greeting from "./components/Greeting";
+// Fragment
+import MyFragment from "./components/MyFragment";
 
 const greeteds = [
   {
@@ -62,15 +64,18 @@ function App() {
           verificationToken="ABCDEF"
         />
 
-        {/* List rendering with components */}
         <h2>List rendering with components</h2>
         {greeteds.map((greeted) => (
           <Greeting
+            key={greeted.verificationToken}
             user={greeted.user}
             email={greeted.email}
             verificationToken={greeted.verificationToken}
           />
         ))}
+
+        <h2>Fragment</h2>
+        <MyFragment />
       </div>
     </>
   );
