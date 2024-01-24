@@ -7,6 +7,8 @@ import Count from "./components/Count";
 import ListRender from "./components/ListRender";
 // Conditional render
 import ConditionalRender from "./components/ConditionalRender";
+// Props
+import ShowUserName from "./components/ShowUserName";
 
 function App() {
   return (
@@ -23,10 +25,16 @@ function App() {
         <h2>Hooks</h2>
         <h4>useState</h4>
         <Count />
+
         <h2>List render</h2>
         <ListRender />
+
         <h2>Conditional render</h2>
         <ConditionalRender />
+
+        <h2>Props</h2>
+        <ShowUserName name="Markiplier" />
+        <ShowUserName name="Jacksepticeye" />
       </div>
     </>
   );
