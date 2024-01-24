@@ -15,6 +15,7 @@ import Greeting from "./components/Greeting";
 import MyFragment from "./components/MyFragment";
 // Children
 import Container from "./components/Container";
+import ExecuteFunction from "./components/ExecuteFunction";
 
 const greeteds = [
   {
@@ -27,6 +28,10 @@ const greeteds = [
 ];
 
 function App() {
+  const handleCick = () => {
+    console.log("Button clicked");
+  };
+
   return (
     <>
       <div className="App" style={{ paddingBottom: "500px" }}>
@@ -83,6 +88,9 @@ function App() {
         <Container>
           <p>Children JSX passed by props</p>
         </Container>
+
+        <h2>Functions in props</h2>
+        <ExecuteFunction handleClick={handleCick} />
       </div>
     </>
   );
