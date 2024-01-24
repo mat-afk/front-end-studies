@@ -9,8 +9,18 @@ import ListRender from "./components/ListRender";
 import ConditionalRender from "./components/ConditionalRender";
 // Props
 import ShowUserName from "./components/ShowUserName";
-import Greeting from "./components/Greeting";
 // Props destructuring
+import Greeting from "./components/Greeting";
+
+const greeteds = [
+  {
+    user: "Python fella",
+    email: "python@gmail.com",
+    verificationToken: "789012",
+  },
+  { user: "C boy", email: "c@outlook.com", verificationToken: "GHIJKL" },
+  { user: "Rust lad", email: "rust@icloud.com", verificationToken: "MNOPQR" },
+];
 
 function App() {
   return (
@@ -51,6 +61,16 @@ function App() {
           email="java@yahoo.com"
           verificationToken="ABCDEF"
         />
+
+        {/* List rendering with components */}
+        <h2>List rendering with components</h2>
+        {greeteds.map((greeted) => (
+          <Greeting
+            user={greeted.user}
+            email={greeted.email}
+            verificationToken={greeted.verificationToken}
+          />
+        ))}
       </div>
     </>
   );
