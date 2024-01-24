@@ -1,4 +1,5 @@
 import "./App.css";
+// Importing components
 import FirstComponent from "./components/FirstComponent";
 
 function App() {
