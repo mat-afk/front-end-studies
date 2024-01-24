@@ -13,6 +13,8 @@ import ShowUserName from "./components/ShowUserName";
 import Greeting from "./components/Greeting";
 // Fragment
 import MyFragment from "./components/MyFragment";
+// Children
+import Container from "./components/Container";
 
 const greeteds = [
   {
@@ -76,6 +78,11 @@ function App() {
 
         <h2>Fragment</h2>
         <MyFragment />
+
+        <h2>Children</h2>
+        <Container>
+          <p>Children JSX passed by props</p>
+        </Container>
       </div>
     </>
   );
