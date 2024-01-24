@@ -9,6 +9,8 @@ import ListRender from "./components/ListRender";
 import ConditionalRender from "./components/ConditionalRender";
 // Props
 import ShowUserName from "./components/ShowUserName";
+import Greeting from "./components/Greeting";
+// Props destructuring
 
 function App() {
   return (
@@ -35,6 +37,13 @@ function App() {
         <h2>Props</h2>
         <ShowUserName name="Markiplier" />
         <ShowUserName name="Jacksepticeye" />
+
+        <h2>Props destructuring</h2>
+        <Greeting
+          user="Gopher guy"
+          email="gopher@hotmail.com"
+          verificationToken="123456"
+        />
       </div>
     </>
   );
