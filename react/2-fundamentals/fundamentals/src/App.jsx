@@ -1,7 +1,7 @@
 import "./App.css";
 // Importing components
 import FirstComponent from "./components/FirstComponent";
-// Template expressions
+import MyComponent from "./components/MyComponent";
 import TemplateExpression from "./components/TemplateExpression";
 
 function App() {
@@ -10,6 +10,7 @@ function App() {
       <h1>Fundamentals</h1>
       <FirstComponent />
       <TemplateExpression />
+      <MyComponent />
     </>
   );
 }
