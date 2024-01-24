@@ -3,6 +3,8 @@ import "./App.css";
 import albumCover from "./assets/glass_beach_album.png";
 // Hooks
 import Count from "./components/Count";
+// List render
+import ListRender from "./components/ListRender";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
         <h2>Hooks</h2>
         <h4>useState</h4>
         <Count />
+        <h4>List render</h4>
+        <ListRender />
       </div>
     </>
   );
