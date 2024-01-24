@@ -5,6 +5,8 @@ import albumCover from "./assets/glass_beach_album.png";
 import Count from "./components/Count";
 // List render
 import ListRender from "./components/ListRender";
+// Conditional render
+import ConditionalRender from "./components/ConditionalRender";
 
 function App() {
   return (
@@ -21,8 +23,10 @@ function App() {
         <h2>Hooks</h2>
         <h4>useState</h4>
         <Count />
-        <h4>List render</h4>
+        <h2>List render</h2>
         <ListRender />
+        <h2>Conditional render</h2>
+        <ConditionalRender />
       </div>
     </>
   );
