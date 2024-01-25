@@ -1,4 +1,5 @@
 import "./App.css";
+import { useState } from "react";
 // Images in the assets folder
 import albumCover from "./assets/glass_beach_album.png";
 // Hooks
@@ -15,7 +16,11 @@ import Greeting from "./components/Greeting";
 import MyFragment from "./components/MyFragment";
 // Children
 import Container from "./components/Container";
+// Functions in props
 import ExecuteFunction from "./components/ExecuteFunction";
+// State lift
+import Message from "./components/Message";
+import ChangeMessage from "./components/ChangeMessage";
 
 const greeteds = [
   {
@@ -30,6 +35,12 @@ const greeteds = [
 function App() {
   const handleCick = () => {
     console.log("Button clicked");
+  };
+
+  const [message, setMessage] = useState("");
+
+  const handleMessage = (message) => {
+    setMessage(message);
   };
 
   return (
@@ -91,6 +102,10 @@ function App() {
 
         <h2>Functions in props</h2>
         <ExecuteFunction handleClick={handleCick} />
+
+        <h2>State lift</h2>
+        <Message message={message} />
+        <ChangeMessage handleMessage={handleMessage} />
       </div>
     </>
   );
