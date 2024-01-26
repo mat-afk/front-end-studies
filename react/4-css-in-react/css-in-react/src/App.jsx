@@ -12,6 +12,11 @@ function App() {
 
         {/* Component based CSS */}
         <MyComponent />
+
+        {/* Inline styles */}
+        <h3 style={{ color: "blue", border: "none", padding: "25px" }}>
+          Inline styles
+        </h3>
       </div>
     </>
   );
