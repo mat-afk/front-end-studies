@@ -11,3 +11,7 @@ body {
 h3 {
   color: #646cffaa;
 }
+
+.authenticated {
+  color: green;
+}

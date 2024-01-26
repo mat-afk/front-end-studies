@@ -23,6 +23,11 @@ function App() {
         <h3 style={isUserAuthenticated ? { color: "green" } : { color: "red" }}>
           Dynamic inline CSS
         </h3>
+
+        {/* Dynamcic CSS classes */}
+        <h3 className={isUserAuthenticated ? "authenticated" : ""}>
+          Dynamic CSS classes
+        </h3>
       </div>
     </>
   );
