@@ -6,11 +6,16 @@ const Form = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
 
-  console.log(name, email);
+  // Form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Name: " + name);
+    console.log("E-mail: " + email);
+  };
 
   return (
     <div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Name:</label>
           <input
