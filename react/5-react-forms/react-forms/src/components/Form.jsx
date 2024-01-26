@@ -5,12 +5,19 @@ const Form = ({ userName, userEmail }) => {
   // Data management with useState
   const [name, setName] = useState(userName);
   const [email, setEmail] = useState(userEmail);
+  const [bio, setBio] = useState("");
 
   // Form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Name: " + name);
     console.log("E-mail: " + email);
+    console.log("Bio: " + bio);
+
+    // Reset form
+    setName("");
+    setEmail("");
+    setBio("");
   };
 
   return (
@@ -27,18 +34,26 @@ const Form = ({ userName, userEmail }) => {
           />
         </div>
         {/* Inputs inside labels */}
-        <div>
-          <label>
-            <span>E-mail:</span>
-            <input
-              type="email"
-              name="email"
-              placeholder="Enter your email"
-              onChange={(e) => setEmail(e.target.value)}
-              value={email || ""}
-            />
-          </label>
-        </div>
+        <label>
+          <span>E-mail:</span>
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            onChange={(e) => setEmail(e.target.value)}
+            value={email || ""}
+          />
+        </label>
+        {/* Textarea */}
+        <label>
+          <span>Bio:</span>
+          <textarea
+            name="bio"
+            placeholder="Enter your profile description"
+            onChange={(e) => setBio(e.target.value)}
+            value={bio || ""}
+          ></textarea>
+        </label>
         <input type="submit" value="Submit" />
       </form>
     </div>
