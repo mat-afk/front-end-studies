@@ -6,6 +6,7 @@ const Form = ({ userName, userEmail }) => {
   const [name, setName] = useState(userName);
   const [email, setEmail] = useState(userEmail);
   const [bio, setBio] = useState("");
+  const [role, setRole] = useState("");
 
   // Form submission
   const handleSubmit = (e) => {
@@ -13,11 +14,13 @@ const Form = ({ userName, userEmail }) => {
     console.log("Name: " + name);
     console.log("E-mail: " + email);
     console.log("Bio: " + bio);
+    console.log("Role: " + role);
 
     // Reset form
     setName("");
     setEmail("");
     setBio("");
+    setRole("");
   };
 
   return (
@@ -53,6 +56,19 @@ const Form = ({ userName, userEmail }) => {
             onChange={(e) => setBio(e.target.value)}
             value={bio || ""}
           ></textarea>
+        </label>
+        {/* Select */}
+        <label>
+          <span>Role:</span>
+          <select
+            name="role"
+            onChange={(e) => setRole(e.target.value)}
+            value={role}
+          >
+            <option value="user">User</option>
+            <option value="editor">Editor</option>
+            <option value="admin">Admin</option>
+          </select>
         </label>
         <input type="submit" value="Submit" />
       </form>
