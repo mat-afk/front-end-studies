@@ -1,5 +1,6 @@
 import "./App.css";
 import MyComponent from "./components/MyComponent";
+import Title from "./components/Title";
 
 function App() {
   const isUserAuthenticated = true;
@@ -28,6 +29,9 @@ function App() {
         <h3 className={isUserAuthenticated ? "authenticated" : ""}>
           Dynamic CSS classes
         </h3>
+
+        {/* CSS Modules */}
+        <Title />
       </div>
     </>
   );
