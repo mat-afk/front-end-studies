@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useFetch } from "./hooks/useFetch";
 
 const url = "http://localhost:3000/products";
 
@@ -8,15 +9,8 @@ function App() {
   // GET - Fetching API data
   const [products, setProducts] = useState([]);
 
-  useEffect(() => {
-    const getProducts = async () => {
-      const response = await fetch(url);
-      const data = await response.json();
-      setProducts(data);
-    };
-
-    getProducts();
-  }, []);
+  // Custom hook
+  const { data: items } = useFetch(url);
 
   // POST - Creating a new product
   const [name, setName] = useState("");
@@ -44,11 +38,12 @@ function App() {
       <h1>HTTP in React</h1>
       {/* GET - Fetching API data */}
       <ul>
-        {products.map((product) => (
-          <li key={product.id}>
-            {product.name} - R$ {product.price}
-          </li>
-        ))}
+        {items &&
+          items.map((product) => (
+            <li key={product.id}>
+              {product.name} - R$ {product.price}
+            </li>
+          ))}
       </ul>
       {/* POST - Creating a new product */}
       <div className="add-product">
