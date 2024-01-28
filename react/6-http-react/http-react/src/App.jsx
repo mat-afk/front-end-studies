@@ -10,7 +10,7 @@ function App() {
   const [products, setProducts] = useState([]);
 
   // Custom hook
-  const { data: items, httpConfig } = useFetch(url);
+  const { data: items, httpConfig, loading } = useFetch(url);
 
   // POST - Creating a new product
   const [name, setName] = useState("");
@@ -28,6 +28,9 @@ function App() {
   return (
     <div>
       <h1>HTTP in React</h1>
+      {/* Loading */}
+      {loading && <p>Loading...</p>}
+
       {/* GET - Fetching API data */}
       <ul>
         {items &&

@@ -9,6 +9,9 @@ export const useFetch = (url) => {
   const [method, setMethod] = useState("GET");
   const [callFetch, setCallFetch] = useState(null);
 
+  // Loading
+  const [loading, setLoading] = useState(false);
+
   const httpConfig = (data, method) => {
     if (method === "POST") {
       setConfig({
@@ -24,8 +27,13 @@ export const useFetch = (url) => {
   // GET - Fetching API data
   useEffect(() => {
     const fetchData = async () => {
+      setLoading(true);
+
       const res = await fetch(url);
       const fetchedData = await res.json();
+
+      setLoading(false);
+
       setData(fetchedData);
     };
 
@@ -38,8 +46,12 @@ export const useFetch = (url) => {
       let json;
 
       if (method === "POST") {
+        setLoading(true);
+
         const res = await fetch(...[url, config]);
         json = await res.json();
+
+        setLoading(false);
       }
 
       setCallFetch(json);
@@ -48,5 +60,5 @@ export const useFetch = (url) => {
     request();
   }, [config, method, url]);
 
-  return { data, httpConfig };
+  return { data, httpConfig, loading };
 };
