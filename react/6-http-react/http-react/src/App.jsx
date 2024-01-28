@@ -32,6 +32,11 @@ function App() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(product),
     });
+
+    // Dynamic rendering
+    const addedProduct = await res.json();
+
+    setProducts((prevProducts) => [...prevProducts, addedProduct]);
   };
 
   return (
