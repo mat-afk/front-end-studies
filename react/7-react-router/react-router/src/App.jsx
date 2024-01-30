@@ -1,5 +1,7 @@
 import { Outlet } from "react-router-dom";
 
+import Navbar from "./components/Navbar";
+
 import "./App.css";
 
 function App() {
@@ -7,7 +9,7 @@ function App() {
     <>
       <div>
         <p>Header</p>
-        <p>Navrar</p>
+        <Navbar />
         <Outlet />
         <p>Footer</p>
       </div>
