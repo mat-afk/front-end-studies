@@ -15,7 +15,12 @@ import Product from "./routes/Product.jsx";
 import "./index.css";
 
 // Router config
-import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  Navigate,
+} from "react-router-dom";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +37,9 @@ const router = createBrowserRouter([
       { path: "/products/:id/info", element: <Info /> },
       // Search
       { path: "/search", element: <Search /> },
+      // Redirect
+      { path: "/home", element: <Navigate to="/" /> },
+      { path: "*", element: <Navigate to="/" /> },
     ],
   },
 ]);
