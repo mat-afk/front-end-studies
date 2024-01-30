@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import Contact from "./routes/Contact.jsx";
 import Home from "./routes/Home.jsx";
+import Info from "./routes/Info.jsx";
 
 // Error page
 import ErrorPage from "./routes/ErrorPage.jsx";
@@ -25,7 +26,12 @@ const router = createBrowserRouter([
       { path: "/", element: <Home /> },
       { path: "/contact", element: <Contact /> },
       // Dynamic routes
-      { path: "/products/:id", element: <Product /> },
+      {
+        path: "/products/:id",
+        element: <Product />,
+      },
+      // Nested routes
+      { path: "/products/:id/info", element: <Info /> },
     ],
   },
 ]);
