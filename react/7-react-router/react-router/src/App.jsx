@@ -1,9 +1,16 @@
+import { Outlet } from "react-router-dom";
+
 import "./App.css";
 
 function App() {
   return (
     <>
-      <h1>App</h1>
+      <div>
+        <p>Header</p>
+        <p>Navrar</p>
+        <Outlet />
+        <p>Footer</p>
+      </div>
     </>
   );
 }
