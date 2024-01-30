@@ -7,6 +7,9 @@ import Home from "./routes/Home.jsx";
 // Error page
 import ErrorPage from "./routes/ErrorPage.jsx";
 
+// Dynamic routes
+import Product from "./routes/Product.jsx";
+
 import "./index.css";
 
 // Router config
@@ -21,6 +24,8 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home /> },
       { path: "/contact", element: <Contact /> },
+      // Dynamic routes
+      { path: "/products/:id", element: <Product /> },
     ],
   },
 ]);
