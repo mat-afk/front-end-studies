@@ -1,8 +1,7 @@
-import { useContext } from "react";
-import { CounterContext } from "../context/CounterContext";
+import { useCounter } from "../hooks/useCounter";
 
 const ChangeCount = () => {
-  const { count, setCount } = useContext(CounterContext);
+  const { count, setCount } = useCounter();
 
   return (
     <div>
