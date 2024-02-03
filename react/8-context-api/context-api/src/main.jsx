@@ -9,8 +9,6 @@ import { CounterProvider } from "./context/CounterContext";
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
-  Navigate,
 } from "react-router-dom";
 
 import "./index.css";
