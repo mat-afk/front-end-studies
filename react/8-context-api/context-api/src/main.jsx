@@ -6,10 +6,9 @@ import Home from "./routes/Home.jsx";
 
 import { CounterProvider } from "./context/CounterContext";
 
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { TitleColorProvider } from "./context/TitleColorContext";
+
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import "./index.css";
 
@@ -27,7 +26,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <CounterProvider>
-      <RouterProvider router={router} />
+      <TitleColorProvider>
+        <RouterProvider router={router} />
+      </TitleColorProvider>
     </CounterProvider>
   </React.StrictMode>
 );
