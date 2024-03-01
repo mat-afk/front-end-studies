@@ -4,6 +4,7 @@ import HookUseState from "../components/HookUseState";
 
 import { useContext } from "react";
 import { SomeContext } from "../components/HookUseContext";
+import HookUseRef from "../components/HookUseRef";
 
 const Home = () => {
   const value = useContext(SomeContext);
@@ -17,6 +18,7 @@ const Home = () => {
       <h3>useContext</h3>
       <p>Context value: {value}</p>
       <hr />
+      <HookUseRef />
     </div>
   );
 };
